@@ -1,4 +1,58 @@
 -------------------------------------------------------------------------------
 Test set: es.uclm.esi.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 49.951 s - in es.uclm.esi.RunCucumberTest
+Tests run: 30, Failures: 0, Errors: 18, Skipped: 0, Time elapsed: 22.431 s <<< FAILURE! - in es.uclm.esi.RunCucumberTest
+Roles de los usuarios de la aplicacion #1  Time elapsed: 2.444 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+Roles de los usuarios de la aplicacion #2  Time elapsed: 0.25 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+Roles de los usuarios de la aplicacion #3  Time elapsed: 0.24 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+Calendario mes #1  Time elapsed: 0.19 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+Calendario mes #2  Time elapsed: 0.181 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+Calendario mes #3  Time elapsed: 0.203 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+Calendario dia #1  Time elapsed: 0.191 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+Calendario dia #2  Time elapsed: 0.186 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+Calendario dia #3  Time elapsed: 0.188 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+Calendario dia #4  Time elapsed: 0.177 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+convocar #1  Time elapsed: 0.183 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+convocar #2  Time elapsed: 0.188 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+convocar #3  Time elapsed: 0.199 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+aceptar  Time elapsed: 0.179 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+rechazar  Time elapsed: 0.261 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+cancelar  Time elapsed: 0.265 s  <<< ERROR!
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+
+registro #6  Time elapsed: 0.479 s  <<< ERROR!
+java.lang.IllegalArgumentException: The given entity must not be null!
+
+registro #7  Time elapsed: 0.56 s  <<< ERROR!
+java.lang.IllegalArgumentException: The given entity must not be null!
+
