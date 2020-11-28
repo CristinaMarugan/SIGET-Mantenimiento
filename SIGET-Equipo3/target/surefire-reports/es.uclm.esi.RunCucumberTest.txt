@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: es.uclm.esi.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 49.951 s - in es.uclm.esi.RunCucumberTest

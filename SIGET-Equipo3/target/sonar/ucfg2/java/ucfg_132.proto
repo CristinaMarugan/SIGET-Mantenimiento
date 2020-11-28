@@ -1,0 +1,19 @@
+
+oes.uclm.esi.security.WebSecurityConfig#authenticationJwtTokenFilter()Les/uclm/esi/security/jwt/AuthTokenFilter;d
+ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java% %(4"1*¢
+1d
+ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java&	 &(ÃÀ
+d
+ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java& &(.
+%0(es.uclm.esi.security.jwt.AuthTokenFilter"(es.uclm.esi.security.jwt.AuthTokenFilterÕ
+Ò
+d
+ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java&	 &(
+%1"2es.uclm.esi.security.jwt.AuthTokenFilter#<init>()V*0
+.
+%0(es.uclm.esi.security.jwt.AuthTokenFilter"˜
+d
+ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java& &(0
+.
+%0(es.uclm.esi.security.jwt.AuthTokenFilterB*(
+&es.uclm.esi.security.WebSecurityConfig

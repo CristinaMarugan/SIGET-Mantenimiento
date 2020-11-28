@@ -1,0 +1,206 @@
+
+åes.uclm.esi.controller.ControllerCancelarReunion#cancelarReunion(Ljava/util/Map;Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java%# %(2"startingBlock*ç
+2n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java0 0(Ú
+Ô
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java0 0(1
+%15*es.uclm.esi.repository.RepositoryReuniones"__id*D*B2
+0es.uclm.esi.controller.ControllerCancelarReunion"
+
+rReuniones…∆
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java0 0(
+%16void"Norg.springframework.data.repository.CrudRepository#delete(Ljava/lang/Object;)V*3
+1
+%15*es.uclm.esi.repository.RepositoryReuniones*&
+$
+reuniones.uclm.esi.model.Reunion2delete(Ljava/lang/Object;)≠
+™
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java1 1(,*
+%17#org.springframework.http.HttpStatus"__id*
+""Ã…
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java1 1(.
+%18'org.springframework.http.ResponseEntity"'org.springframework.http.ResponseEntity≤
+Ø
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java1
+ 1(-
+%19"Vorg.springframework.http.ResponseEntity#<init>(Lorg/springframework/http/HttpStatus;)V*0
+.
+%18'org.springframework.http.ResponseEntity*,
+*
+%17#org.springframework.http.HttpStatus"¢
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java1 1(.0
+.
+%18'org.springframework.http.ResponseEntity*Å&
+3n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java&& &()£†
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java& &(%
+%0org.json.JSONObject"org.json.JSONObject‹
+Ÿ
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java& &(*
+%1",org.json.JSONObject#<init>(Ljava/util/Map;)V*
+
+%0org.json.JSONObject*
+
+reqjava.util.Map∂
+≥
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java& &(+
+requestorg.json.JSONObject"__id*
+
+%0org.json.JSONObjectß
+§
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java' '($
+reuniones.uclm.esi.model.Reunion"__id*
+""Ò
+Ó
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java) )(0
+%2*es.uclm.esi.repository.RepositoryReuniones"__id*D*B2
+0es.uclm.esi.controller.ControllerCancelarReunion"
+
+rReunionesıÚ
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java)  )(4	
+%3int"/org.json.JSONObject#getInt(Ljava/lang/String;)I* 
+
+requestorg.json.JSONObject*
+id2getInt(Ljava/lang/String;)µ≤
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java) )(5
+%4es.uclm.esi.model.Reunion"Qes.uclm.esi.repository.RepositoryReuniones#findById(I)Les/uclm/esi/model/Reunion;*2
+0
+%2*es.uclm.esi.repository.RepositoryReuniones*
+	
+%3int2findById(I)¬
+ø
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java) )(5$
+reuniones.uclm.esi.model.Reunion"__id*!
+
+%4es.uclm.esi.model.ReunionË
+Â
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java+% +(2
+%5io.jsonwebtoken.JwtParser"8io.jsonwebtoken.Jwts#parser()Lio/jsonwebtoken/JwtParser;*"
+io.jsonwebtoken.Jwts÷
+”
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java+A +(J
+%6java.lang.String"__id*C*A2
+0es.uclm.esi.controller.ControllerCancelarReunion"
+	jwtSecretÃ…
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java+% +(K
+%7io.jsonwebtoken.JwtParser"Vio.jsonwebtoken.JwtParser#setSigningKey(Ljava/lang/String;)Lio/jsonwebtoken/JwtParser;*!
+
+%5io.jsonwebtoken.JwtParser*
+
+%6java.lang.String2!setSigningKey(Ljava/lang/String;)¡æ
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java+n +(|	
+%8int"java.lang.String#length()I*
+
+tokenjava.lang.String2length()¸˘
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java+[ +(}
+%9java.lang.String"0java.lang.String#substring(II)Ljava/lang/String;*
+
+tokenjava.lang.String*2*
+	
+%8int2substring(II)√¿
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java+% +(~
+%10io.jsonwebtoken.Jws"Qio.jsonwebtoken.JwtParser#parseClaimsJws(Ljava/lang/String;)Lio/jsonwebtoken/Jws;*!
+
+%7io.jsonwebtoken.JwtParser*
+
+%9java.lang.String2"parseClaimsJws(Ljava/lang/String;)ÏÈ
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java+% ,(
+%11io.jsonwebtoken.Claims"/io.jsonwebtoken.Jwt#getBody()Ljava/lang/Object;*
+
+%10io.jsonwebtoken.Jws2	getBody()ÚÔ
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java+% ,(
+%12java.lang.String"5io.jsonwebtoken.Claims#getSubject()Ljava/lang/String;*
+
+%11io.jsonwebtoken.Claims2getSubject()√
+¿
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java+ ,(-
+nombreOrganizadorCabecerajava.lang.String"__id*
+
+%12java.lang.StringÑÅ
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java. .(5
+%13java.lang.String"<es.uclm.esi.model.Reunion#getOrganizador()Ljava/lang/String;*&
+$
+reuniones.uclm.esi.model.Reunion2getOrganizador()ª
+∏
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java. .(6%
+nombreOrganizadorjava.lang.String"__id*
+
+%13java.lang.Stringß§
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java/ /(8
+%14boolean",java.lang.String#equals(Ljava/lang/Object;)Z*'
+%
+nombreOrganizadorjava.lang.String*/
+-
+nombreOrganizadorCabecerajava.lang.String2equals(Ljava/lang/Object;)*
+2
+1*ê
+startingBlocko
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java%2 %(áﬁ
+€
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java%Z %(y
+%23"
+__annotate*97
+5org.springframework.web.bind.annotation.RequestHeader*
+
+tokenjava.lang.Stringß
+§
+p
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java%Å %(Ü
+tokenjava.lang.String"__annotation*
+
+%23*
+3*Ã
+1n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java3 3()≠
+™
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java3 3(5*
+%20#org.springframework.http.HttpStatus"__id*
+""Ã…
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java3 3(.
+%21'org.springframework.http.ResponseEntity"'org.springframework.http.ResponseEntity≤
+Ø
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java3
+ 3(6
+%22"Vorg.springframework.http.ResponseEntity#<init>(Lorg/springframework/http/HttpStatus;)V*0
+.
+%21'org.springframework.http.ResponseEntity*,
+*
+%20#org.springframework.http.HttpStatus"¢
+n
+dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerCancelarReunion.java3 3(70
+.
+%21'org.springframework.http.ResponseEntity:
+reqjava.util.Map:
+tokenjava.lang.StringB42
+0es.uclm.esi.controller.ControllerCancelarReunion

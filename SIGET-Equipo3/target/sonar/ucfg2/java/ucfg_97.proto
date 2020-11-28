@@ -1,0 +1,42 @@
+
+Ées.uclm.esi.config.TomcatConfig#webServerFactory()Lorg/springframework/boot/web/servlet/server/ConfigurableServletWebServerFactory;]
+SC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/config/TomcatConfig.java, (<"1*∏
+1]
+SC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/config/TomcatConfig.java* (MÄ˝
+]
+SC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/config/TomcatConfig.java. (KP
+%0Jorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory"Jorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactoryí
+è
+]
+SC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/config/TomcatConfig.java* (M
+%1"Torg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory#<init>()V*R
+P
+%0Jorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactoryì
+ê
+]
+SC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/config/TomcatConfig.java (NU
+factoryJorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory"__id*R
+P
+%0Jorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactoryÆ´
+]
+SC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/config/TomcatConfig.java& (?'
+%2!es.uclm.esi.config.TomcatConfig$1"!es.uclm.esi.config.TomcatConfig$1Ø
+¨
+]
+SC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/config/TomcatConfig.java" (
+%3"java.lang.Object#<init>()V*)
+'
+%2!es.uclm.esi.config.TomcatConfig$1áÑ
+]
+SC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/config/TomcatConfig.java (
+
+%4void"Æorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory#addConnectorCustomizers([Lorg/springframework/boot/web/embedded/tomcat/TomcatConnectorCustomizer;)V*W
+U
+factoryJorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory*)
+'
+%2!es.uclm.esi.config.TomcatConfig$12baddConnectorCustomizers([Lorg/springframework/boot/web/embedded/tomcat/TomcatConnectorCustomizer;)"∏
+]
+SC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/config/TomcatConfig.java (W
+U
+factoryJorg.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactoryB#!
+es.uclm.esi.config.TomcatConfig

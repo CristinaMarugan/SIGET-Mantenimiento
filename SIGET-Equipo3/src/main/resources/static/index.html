@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Login</title>
+<meta charset="ISO-8859-1">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+<style>
+    input[type=text] {
+        box-sizing:border-box;
+        padding:8px;
+    }
+    input[type=password] {
+        box-sizing:border-box;
+        padding:8px;
+    }
+    input[type=email] {
+        box-sizing:border-box;
+        padding:8px;
+    }
+    input[type=text]:focus{
+        box-shadow: 0 0 8px 0 dodgerBlue;
+    }
+    input[type=password]:focus{
+        box-shadow: 0 0 8px 0 dodgerBlue;
+    }
+    input[type=email]:focus{
+        box-shadow: 0 0 8px 0 dodgerBlue;
+    }
+    
+</style>
+</head>
+<body>
+<body style="background-color:#86D5E0;">
+ 
+<div class="body"></div>
+    <body style="background-color:#DAF2F5">
+    <div class="jumbotron text-center" style="background-color:#FFFFFF">
+    </div>
+    <div class="grad"></div>
+        <div class="header">
+        <div style="color:#FFFFFF;"align = center><H1>Bienvenid@ a SIGET </H1></div>
+        <div style="color:#EAF6F4; font-style: italic;"align = center><H2> Su agenda virtual </H2></div>
+    </div>
+    <br>
+        
+<div class="jumbotron text-center" style="background-color:#FFFFFF;"> 
+    <div class="row" id="divMenu">
+        <div class="col-sm-3"></div>
+         <div class="col-sm-3" id="mostrarLogin">
+            <H2><a>Log In</a></H2> 
+        </div>
+        <div class="col-sm-3" id="mostrarRegistro">
+            <H2><a>Sign Up</a></H2>
+        </div>
+        <div class="col-sm-3"></div>
+        </div>
+    <div class="container" id="divFormularios">
+        <div class="row">
+            <div class="col-sm-12 col-centered">
+                <!-- hidden para que salga por defecto login -->
+                 <div id="divLogin" style="display:hidden"> 
+                    <em class="fa fa-id-card-o"></em>
+                    <input type="text" id="loginUsername" placeholder="Username"><br>
+                    <em class="fa fa-key icon"></em>
+                    <input type="password" id="loginUserPassword" placeholder="password"><br>
+                    <button onclick="LogIn()" id="btnLogin">LogIn</button><br>
+                </div> 
+                <div id="divRegistro" style="display:none">
+                    <em class="fa fa-user fa-lg fa-fw" aria-hidden="true"></em>
+                    <input type="text" placeholder="user full name" id="SignUpName"><br>
+                    <em class="fa fa-envelope icon"></em>
+                    <input type="email" placeholder="email" id="SignUpEmail"><br>
+                    <em class="fa fa-key icon"></em>
+                    <input type="password" placeholder="password" id="pwd1"><br>
+                    <button onclick="SignUp()" id="registroBtn">SignUp</button><br>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+
+<script>
+$(document).ready(function() {
+    $("#mostrarLogin").click(function() {
+        $("#divLogin").show();
+        $("#divRegistro").hide()
+    }),
+    $("#mostrarRegistro").click(function() {
+        $("#divLogin").hide();
+        $("#divRegistro").show()
+    })
+});
+
+function SignUp() {
+    var info = {
+        type : "Register",
+        username : $("#SignUpName").val(),
+        email : $("#SignUpEmail").val(),
+        password : $("#pwd1").val()
+    };
+    var data = {
+            data : JSON.stringify(info),
+            url : "api/auth/signup",
+            type : "post",
+            contentType: 'application/json',
+            success : function() {
+                alert("Registro realizado");
+            },
+            error : function(response) {
+                alert("Error en el registro del usuario");
+            }
+        };
+        $.ajax(data);
+}
+
+function LogIn() {
+    var info = {
+        type : "Login",
+        username : $("#loginUsername").val(),
+        password : $("#loginUserPassword").val()
+    };
+    
+    var data = {
+        data : JSON.stringify(info),
+        url : "api/auth/signin",
+        type : "post",
+        contentType: 'application/json',
+        success : function(response) {
+        localStorage.setItem('jwt','Bearer '+response.accessToken);//guardo el token que luego habra que enviar en el header de las peticiones
+
+        localStorage.setItem('accessToken','acesoAlToken');
+        window.location.href="calendario.html";
+        },
+        error : function(response) {
+            alert("Error en la autenticacion del usuario");
+        }
+    };
+    $.ajax(data);
+    console.log(data);
+}
+
+
+
+function requestToken() {
+    alert("En requestToken");
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+function llamadaAsistentes(){
+	mesActual = hoy.getMonth() + 1;
+    anoActual = hoy.getFullYear();
+    var info = {
+        type : "PeticionReunionesMes",
+        mes : mesActual,
+        ano : anoActual
+    };
+    $.ajax({
+        url : '/reunion/getAsistentes',
+        data : JSON.stringify(info),
+        type : "post",
+        dataType: 'json',
+        contentType: 'application/json',
+        headers: { 'Authorization': localStorage.getItem("jwt") },
+        success : function(response) {
+			console.log(response);
+        },
+        error : function(response) {
+            console.log('Se produjo un problema en getAsistentes()');
+        }
+    });
+}

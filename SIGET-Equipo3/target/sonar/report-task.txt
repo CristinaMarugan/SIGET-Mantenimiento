@@ -1,0 +1,8 @@
+organization=germanuclm
+projectKey=GermanUCLM_SIGET-Equipo3
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.14775
+branch=mejoras_calidad
+dashboardUrl=https://sonarcloud.io/dashboard?id=GermanUCLM_SIGET-Equipo3&branch=mejoras_calidad&resolved=false
+ceTaskId=AXX5iXZgYdJFdtEoMHQ1
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXX5iXZgYdJFdtEoMHQ1

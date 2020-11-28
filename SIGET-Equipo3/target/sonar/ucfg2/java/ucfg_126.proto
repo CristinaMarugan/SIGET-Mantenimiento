@@ -1,0 +1,66 @@
+
+les.uclm.esi.security.jwt.AuthTokenFilter#parseJwt(Ljavax/servlet/http/HttpServletRequest;)Ljava/lang/String;f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/AuthTokenFilter.java6 6("4*­
+2f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/AuthTokenFilter.java: :(¾»
+f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/AuthTokenFilter.java:% :(8	
+%3int"java.lang.String#length()I* 
+
+
+headerAuthjava.lang.String2length()ùö
+f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/AuthTokenFilter.java: :(9
+%4java.lang.String"0java.lang.String#substring(II)Ljava/lang/String;* 
+
+
+headerAuthjava.lang.String*2*
+	
+%3int2substring(II)"‚
+f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/AuthTokenFilter.java: :(:
+
+%4java.lang.String*ñ
+3f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/AuthTokenFilter.java9+ 9(5ûø
+f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/AuthTokenFilter.java9+ 9(K
+%2boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z* 
+
+
+headerAuthjava.lang.String*	
+Bearer 2startsWith(Ljava/lang/String;)*
+2
+1*ð
+4f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/AuthTokenFilter.java7 7(À½
+f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/AuthTokenFilter.java7 7(:
+%0java.lang.String"Ujavax.servlet.http.HttpServletRequest#getHeader(Ljava/lang/String;)Ljava/lang/String;*2
+0
+request%javax.servlet.http.HttpServletRequest*
+Authorization2getHeader(Ljava/lang/String;)«
+¨
+f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/AuthTokenFilter.java7 7(;
+
+headerAuthjava.lang.String"__id*
+
+%0java.lang.String‰
+†
+f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/AuthTokenFilter.java9 9('
+%1boolean"Aorg.springframework.util.StringUtils#hasText(Ljava/lang/String;)Z*("&
+$org.springframework.util.StringUtils* 
+
+
+headerAuthjava.lang.String*
+3
+1*Ý
+1f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/AuthTokenFilter.java= =("p
+f
+\C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/jwt/AuthTokenFilter.java= =(
+"":0
+request%javax.servlet.http.HttpServletRequestB,*
+(es.uclm.esi.security.jwt.AuthTokenFilter

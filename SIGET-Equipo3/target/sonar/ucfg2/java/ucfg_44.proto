@@ -1,0 +1,51 @@
+
+8es.uclm.esi.model.Asistente#toString()Ljava/lang/String;Y
+OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java ("1*ó	
+1Y
+OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java 	  (ª
+§
+Y
+OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java   (%
+%0java.lang.String"__id*,**
+es.uclm.esi.model.Asistente"	
+usuario°
+­
+Y
+OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java 	  (%
+%1java.lang.String"__concat*
+{\"usuario\": \"*
+
+%0java.lang.String²
+¯
+Y
+OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java 	  (<
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+\", \"estado\": \"©
+¦
+Y
+OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java ?  (E
+%3java.lang.String"__id*+*)
+es.uclm.esi.model.Asistente"
+estado´
+±
+Y
+OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java 	  (E
+%4java.lang.String"__concat*
+
+%2java.lang.String*
+
+%3java.lang.String£
+ 
+Y
+OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java 	  (M
+%5java.lang.String"__concat*
+
+%4java.lang.String*
+\"}"u
+Y
+OC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/model/Asistente.java   (N
+
+%5java.lang.StringB
+es.uclm.esi.model.Asistente
