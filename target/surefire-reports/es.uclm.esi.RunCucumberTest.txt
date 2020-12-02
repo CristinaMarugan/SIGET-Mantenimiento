@@ -1,58 +1,58 @@
 -------------------------------------------------------------------------------
 Test set: es.uclm.esi.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 30, Failures: 0, Errors: 18, Skipped: 0, Time elapsed: 22.431 s <<< FAILURE! - in es.uclm.esi.RunCucumberTest
-Roles de los usuarios de la aplicacion #1  Time elapsed: 2.444 s  <<< ERROR!
+Tests run: 30, Failures: 2, Errors: 16, Skipped: 0, Time elapsed: 22.388 s <<< FAILURE! - in es.uclm.esi.RunCucumberTest
+Roles de los usuarios de la aplicacion #1  Time elapsed: 2.837 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-Roles de los usuarios de la aplicacion #2  Time elapsed: 0.25 s  <<< ERROR!
+Roles de los usuarios de la aplicacion #2  Time elapsed: 0.217 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-Roles de los usuarios de la aplicacion #3  Time elapsed: 0.24 s  <<< ERROR!
+Roles de los usuarios de la aplicacion #3  Time elapsed: 0.22 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-Calendario mes #1  Time elapsed: 0.19 s  <<< ERROR!
+Calendario mes #1  Time elapsed: 0.215 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-Calendario mes #2  Time elapsed: 0.181 s  <<< ERROR!
+Calendario mes #2  Time elapsed: 0.197 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-Calendario mes #3  Time elapsed: 0.203 s  <<< ERROR!
+Calendario mes #3  Time elapsed: 0.22 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-Calendario dia #1  Time elapsed: 0.191 s  <<< ERROR!
+Calendario dia #1  Time elapsed: 0.212 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-Calendario dia #2  Time elapsed: 0.186 s  <<< ERROR!
+Calendario dia #2  Time elapsed: 0.211 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-Calendario dia #3  Time elapsed: 0.188 s  <<< ERROR!
+Calendario dia #3  Time elapsed: 0.219 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-Calendario dia #4  Time elapsed: 0.177 s  <<< ERROR!
+Calendario dia #4  Time elapsed: 0.183 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-convocar #1  Time elapsed: 0.183 s  <<< ERROR!
+convocar #1  Time elapsed: 0.21 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-convocar #2  Time elapsed: 0.188 s  <<< ERROR!
+convocar #2  Time elapsed: 0.212 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-convocar #3  Time elapsed: 0.199 s  <<< ERROR!
+convocar #3  Time elapsed: 0.213 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-aceptar  Time elapsed: 0.179 s  <<< ERROR!
+aceptar  Time elapsed: 0.194 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-rechazar  Time elapsed: 0.261 s  <<< ERROR!
+rechazar  Time elapsed: 0.217 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-cancelar  Time elapsed: 0.265 s  <<< ERROR!
+cancelar  Time elapsed: 0.206 s  <<< ERROR!
 org.springframework.security.authentication.BadCredentialsException: Bad credentials
 
-registro #6  Time elapsed: 0.479 s  <<< ERROR!
-java.lang.IllegalArgumentException: The given entity must not be null!
+registro #6  Time elapsed: 0.149 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[User registered successfully]!> but was:<[Error: Username is already taken]!>
 
-registro #7  Time elapsed: 0.56 s  <<< ERROR!
-java.lang.IllegalArgumentException: The given entity must not be null!
+registro #7  Time elapsed: 0.13 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[User registered successfully]!> but was:<[Error: Username is already taken]!>
 
