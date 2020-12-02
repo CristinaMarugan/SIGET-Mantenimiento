@@ -19,6 +19,7 @@ public class User {
   @NotBlank
   @Size(max = 20)
   private String username;
+  
 
   @NotBlank
   @Size(max = 50)
