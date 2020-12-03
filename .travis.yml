@@ -4,13 +4,6 @@ script:
 - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=CarrivasUclm_SIGET-Equipo3
 before_install:
 - chmod +x mvnw
-deploy:
-  provider: heroku
-  app: SIGET-Equipo3
-  on:
-    branch: develop
-  api_key:
-    secure: WAJQHT8N1hn+ZECcIcSWlt4KKUK9yIQvyatB0eC9oUd9QXfU2tWs9cSBhx09UJW3BpAZSQjZGjw3Jc2sY8D+TzK912PyQlWhjZRw19TypcAcTH4Q2lY5TsJLZ34eZ73G3ztkhD10ZXxNbaPwJ4hu3ns6gjS6IIhfH27N6ac36mgVnqY9qVGhH/3pmXkfvCxx/D78+ztf6beYcVmDasqa66rwd/nq1LQkZKhZLqSQd3oy4OFlAswMwfcydb3WBQJpLunavcncRUENcrPwasmGLoOjMuj33knt5nF8U2hk2pVb2aNk4sI0J5hQ0r9QTFGeJx8kLjaP7W3XY0qbqSYb+KiTG8uuG4uZX7Rs4nS4R4vAgfikpftNTwRtUb8aYJMiOE/XAPW9DIO27dt3kPhiiurGY8FWcIAYat3KY4jy/f1msD1euGrl41Fca18f90k1q1idMCMhOrrRQxQwYuZxYIy4BRi+js5AIOHm0k3tQwZUbRIIupUnKtfCFR0EDPv424MyvRUm8jPwoxs60A1LTOdSztX+q7QwFX5z9G/jix0ZjqzEdN5wonPWWKHpdGcpzryuJa9ajW7SfoW5E3+nZ84BtN84I+fNt9Jn3xyRGj9UUCD8PjSuJRxLusjOVsEEaUonSa81Dh7eFxzNVXRm7mI5F8onMpzGyzHmrmqZ3Bk=
 addons:
   sonarcloud:
     organization: agibilibus
