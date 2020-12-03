@@ -14,7 +14,7 @@
   
 #  Examples:
 #  |	titulo	|		dia	|	mes	|	ano	|	hora	| descripcion |	asistentes	|	codigo	|
-#  |	"Reunion 1"	|	52	|	12	|	2020	|	"22:00"	| "Prueba" |	"Fatima:pendiente,Victor:pendiente,admin:pendiente"	|	400	|
-#  |	"Reunion 2"	|	11	|	15	|	2020	|	"16:00"	|	"Prueba" |	"Fatima:pendiente,Victor:pendiente,admin:pendiente"	|	400	|
+#  |	"Reunion 1"	|	52	|	12	|	2020	|	"22:00"	| "Prueba" |	"Elisa:pendiente,Victor:pendiente,admin:pendiente"	|	400	|
+#  |	"Reunion 2"	|	11	|	15	|	2020	|	"16:00"	|	"Prueba" |	"Elisa:pendiente,Victor:pendiente,admin:pendiente"	|	400	|
 #  |	"test"	|	31	|	12	|	2020	|	"23:00"	|	"test" |	"admin:pendiente"	|	200	|
   
