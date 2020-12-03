@@ -1,4 +1,4 @@
-/*package es.uclm.esi;
+package es.uclm.esi;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,9 +15,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.client.HttpClientErrorException;
 
+import es.uclm.esi.controller.ControllerConvocarReunion;
 import es.uclm.esi.model.Reunion;
 import es.uclm.esi.repository.RepositoryReuniones;
 import es.uclm.esi.security.jwt.JwtUtils;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -35,11 +37,13 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 	AuthenticationManager authenticationManager;
 	@Autowired
 	RepositoryReuniones rReuniones;
-
+	
+	ControllerConvocarReunion controller;
+	
 	@When("cancelo la reunion")
 	public void cancelo_la_reunion() {
 		Authentication authentication = authenticationManager.authenticate(
-				new UsernamePasswordAuthenticationToken("admin","Admin123"));
+				new UsernamePasswordAuthenticationToken("Elisa","Seguridad2020"));
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 		String token = jwtUtils.generateJwtToken(authentication);
 		headers.set("Authorization", "Bearer " + token);
@@ -65,4 +69,4 @@ public class CancelarReunionStepDefinitions extends SpringIntegrationTest {
 
 	
 
-}*/
+}

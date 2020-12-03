@@ -1,11 +1,11 @@
-#Feature: Cancelar
+Feature: Cancelar
 
-#  Scenario Outline: cancelar
+Scenario Outline: cancelar
   
-#  When cancelo la reunion 
-#  Then la respuesta debe ser <codigo>
+When cancelo la reunion 
+Then la respuesta debe ser <codigo>
  
   
-#  Examples:
-#	| codigo | 
-#  | 200 | 
+Examples:
+	| codigo | 
+  | 200 | 
