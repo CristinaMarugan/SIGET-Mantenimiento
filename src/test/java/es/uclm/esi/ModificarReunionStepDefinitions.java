@@ -1,4 +1,4 @@
-package es.uclm.esi;
+/*package es.uclm.esi;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -146,4 +146,4 @@ public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
 		}
 	}
 
-}
+}*/

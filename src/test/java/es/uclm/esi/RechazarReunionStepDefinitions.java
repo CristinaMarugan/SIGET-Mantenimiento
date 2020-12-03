@@ -1,4 +1,4 @@
-package es.uclm.esi;
+/*package es.uclm.esi;
 
 import static org.junit.Assert.assertEquals;
 import java.util.HashMap;
@@ -64,4 +64,4 @@ public class RechazarReunionStepDefinitions extends SpringIntegrationTest {
 
 	
 
-}
+}*/
