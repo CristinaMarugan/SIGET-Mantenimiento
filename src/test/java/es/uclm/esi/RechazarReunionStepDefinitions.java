@@ -38,7 +38,7 @@ public class RechazarReunionStepDefinitions extends SpringIntegrationTest {
 	@When("rechazo la reunion")
 	public void rechazo_la_reunion() {
 		Authentication authentication = authenticationManager.authenticate(
-				new UsernamePasswordAuthenticationToken("admin","Admin123"));
+				new UsernamePasswordAuthenticationToken("manu","manu"));
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 		String token = jwtUtils.generateJwtToken(authentication);
 		headers.set("Authorization", "Bearer " + token);
