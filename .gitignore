@@ -1,3 +1,12 @@
 target/classes/META-INF/
 target/classes/es/
 target/test-classes/
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+target/surefire-reports/2020-12-04T11-38-57_082-jvmRun1.dump
+target/surefire-reports/es.uclm.esi.SigetApplicationTests.txt
+target/surefire-reports/JUnit Vintage.txt
+target/surefire-reports/TEST-JUnit Vintage.xml
+*.class
+*.lst
+*.txt
+*.xml
