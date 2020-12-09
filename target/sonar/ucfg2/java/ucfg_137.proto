@@ -1,71 +1,0 @@
-
-–es.uclm.esi.security.services.UserDetailsServiceImpl#loadUserByUsername(Ljava/lang/String;)Lorg/springframework/security/core/userdetails/UserDetails;r
-hC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsServiceImpl.java (&"startingBlock*ì
-startingBlockr
-hC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsServiceImpl.java& (7Á
-¾
-r
-hC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsServiceImpl.java (
-
-%4"
-__annotate*
-java.lang.Override*
-
-usernamejava.lang.Stringç
-ä
-r
-hC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsServiceImpl.java (
-%5"
-__annotate*<:
-8org.springframework.transaction.annotation.Transactional*
-
-usernamejava.lang.String³
-°
-r
-hC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsServiceImpl.java. (6
-usernamejava.lang.String"__annotation*
-
-%4*
-
-%5*
-1*€
-1r
-hC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsServiceImpl.java (ø
-õ
-r
-hC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsServiceImpl.java (+
-%0%es.uclm.esi.repository.UserRepository"__id*L*J6
-4es.uclm.esi.security.services.UserDetailsServiceImpl"
-userRepositoryâß
-r
-hC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsServiceImpl.java (5
-%1java.util.Optional"\es.uclm.esi.repository.UserRepository#findByUsername(Ljava/lang/String;)Ljava/util/Optional;*-
-+
-%0%es.uclm.esi.repository.UserRepository*
-
-usernamejava.lang.String2"findByUsername(Ljava/lang/String;)¶³
-r
-hC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsServiceImpl.java (b
-%2es.uclm.esi.model.User"Ojava.util.Optional#orElseThrow(Ljava/util/function/Supplier;)Ljava/lang/Object;*
-
-%1java.util.Optional*
-""2*orElseThrow(Ljava/util/function/Supplier;)½
-º
-r
-hC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsServiceImpl.java (c
-useres.uclm.esi.model.User"__id*
-
-%2es.uclm.esi.model.Userÿ
-ü
-r
-hC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsServiceImpl.java	 ($3
-%3-es.uclm.esi.security.services.UserDetailsImpl"|es.uclm.esi.security.services.UserDetailsImpl#build(Les/uclm/esi/model/User;)Les/uclm/esi/security/services/UserDetailsImpl;*1"/
--es.uclm.esi.security.services.UserDetailsImpl* 
-
-useres.uclm.esi.model.User"«
-r
-hC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsServiceImpl.java (%5
-3
-%3-es.uclm.esi.security.services.UserDetailsImpl:
-usernamejava.lang.StringB86
-4es.uclm.esi.security.services.UserDetailsServiceImpl

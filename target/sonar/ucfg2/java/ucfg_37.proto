@@ -1,246 +1,0 @@
-
-ães.uclm.esi.controller.AuthController#authenticateUser(Les/uclm/esi/payload/request/LoginRequest;)Lorg/springframework/http/ResponseEntity;c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java7 7(*"startingBlock*œ
-startingBlockc
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java7* 7(Ys
-q
-
-__unknown_file (
-%22"__id*H*F
-8
-loginRequest(es.uclm.esi.payload.request.LoginRequest"
-
-passwords
-q
-
-__unknown_file (
-%23"__id*H*F
-8
-loginRequest(es.uclm.esi.payload.request.LoginRequest"
-
-username†
-ù
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java7+ 7(1
-%24"
-__annotate*
-javax.validation.Valid*
-
-%22Ω
-∫
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java72 7(>
-%25"
-__annotate*75
-3org.springframework.web.bind.annotation.RequestBody*
-
-%22–
-Õ
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java7L 7(XF
-8
-loginRequest(es.uclm.esi.payload.request.LoginRequest"
-
-password"__annotation*
-
-%24*
-
-%25†
-ù
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java7+ 7(1
-%26"
-__annotate*
-javax.validation.Valid*
-
-%23Ω
-∫
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java72 7(>
-%27"
-__annotate*75
-3org.springframework.web.bind.annotation.RequestBody*
-
-%23–
-Õ
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java7L 7(XF
-8
-loginRequest(es.uclm.esi.payload.request.LoginRequest"
-
-username"__annotation*
-
-%26*
-
-%27*
-1*Æ?
-1c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java9" 9(7˝
-˙
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java9" 9(7G
-%0Aorg.springframework.security.authentication.AuthenticationManager"__id*D*B'
-%es.uclm.esi.controller.AuthController"
-authenticationManagerïí
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java:, :(F
-%1java.lang.String"Hes.uclm.esi.payload.request.LoginRequest#getUsername()Ljava/lang/String;*:
-8
-loginRequest(es.uclm.esi.payload.request.LoginRequest2getUsername()ïí
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java:H :(b
-%2java.lang.String"Hes.uclm.esi.payload.request.LoginRequest#getPassword()Ljava/lang/String;*:
-8
-loginRequest(es.uclm.esi.payload.request.LoginRequest2getPassword()êç
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java: :(+U
-%3Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken"Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken˙
-˜
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java: :(c
-%4"}org.springframework.security.authentication.UsernamePasswordAuthenticationToken#<init>(Ljava/lang/Object;Ljava/lang/Object;)V*W
-U
-%3Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken*
-
-%1java.lang.String*
-
-%2java.lang.StringΩ∫
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java9" :(d6
-%50org.springframework.security.core.Authentication"¥org.springframework.security.authentication.AuthenticationManager#authenticate(Lorg/springframework/security/core/Authentication;)Lorg/springframework/security/core/Authentication;*I
-G
-%0Aorg.springframework.security.authentication.AuthenticationManager*W
-U
-%3Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken2@authenticate(Lorg/springframework/security/core/Authentication;)Ï
-È
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java9 :(eB
-authentication0org.springframework.security.core.Authentication"__id*8
-6
-%50org.springframework.security.core.Authentication¯
-ı
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java< <($?
-%69org.springframework.security.core.context.SecurityContext"áorg.springframework.security.core.context.SecurityContextHolder#getContext()Lorg/springframework/security/core/context/SecurityContext;*C"A
-?org.springframework.security.core.context.SecurityContextHolder«ƒ
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java< <(F
-
-%7void"Äorg.springframework.security.core.context.SecurityContext#setAuthentication(Lorg/springframework/security/core/Authentication;)V*A
-?
-%69org.springframework.security.core.context.SecurityContext*D
-B
-authentication0org.springframework.security.core.Authentication2EsetAuthentication(Lorg/springframework/security/core/Authentication;)–
-Õ
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java= =('
-%8!es.uclm.esi.security.jwt.JwtUtils"__id*7*5'
-%es.uclm.esi.controller.AuthController"
-
-jwtUtils±Æ
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java= =(8
-%9java.lang.String"xes.uclm.esi.security.jwt.JwtUtils#generateJwtToken(Lorg/springframework/security/core/Authentication;)Ljava/lang/String;*)
-'
-%8!es.uclm.esi.security.jwt.JwtUtils*D
-B
-authentication0org.springframework.security.core.Authentication2DgenerateJwtToken(Lorg/springframework/security/core/Authentication;)°
-û
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java= =(9
-jwtjava.lang.String"__id*
-
-%9java.lang.String™ß
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java?2 ?(O
-%10java.lang.Object"Qorg.springframework.security.core.Authentication#getPrincipal()Ljava/lang/Object;*D
-B
-authentication0org.springframework.security.core.Authentication2getPrincipal()«
-ƒ
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java? ?(P<
-userDetails-es.uclm.esi.security.services.UserDetailsImpl"__id*
-
-%10java.lang.Object≠™
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java@ @(3
-%11java.util.Collection"Tes.uclm.esi.security.services.UserDetailsImpl#getAuthorities()Ljava/util/Collection;*>
-<
-userDetails-es.uclm.esi.security.services.UserDetailsImpl2getAuthorities()ÈÊ
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java@ @(<
-%12java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
-
-%11java.util.Collection2stream()´®
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java@ A(%
-%13java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;* 
-
-%12java.util.stream.Stream*
-""2"map(Ljava/util/function/Function;)Ó
-Î
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.javaB B( !
-%14java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*"
-java.util.stream.Collectorsæª
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java@ B(!
-%15java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
-
-%13java.util.stream.Stream*#
-!
-%14java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)†
-ù
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.java@ B("
-rolesjava.util.List"__id*
-
-%15java.util.Listìê
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.javaE E( 
-%16java.lang.String"Ges.uclm.esi.security.services.UserDetailsImpl#getId()Ljava/lang/String;*>
-<
-userDetails-es.uclm.esi.security.services.UserDetailsImpl2getId()üú
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.javaF F(&
-%17java.lang.String"Mes.uclm.esi.security.services.UserDetailsImpl#getUsername()Ljava/lang/String;*>
-<
-userDetails-es.uclm.esi.security.services.UserDetailsImpl2getUsername()ôñ
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.javaG G(#
-%18java.lang.String"Jes.uclm.esi.security.services.UserDetailsImpl#getEmail()Ljava/lang/String;*>
-<
-userDetails-es.uclm.esi.security.services.UserDetailsImpl2
-getEmail()√¿
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.javaD D(*/
-%19(es.uclm.esi.payload.response.JwtResponse"(es.uclm.esi.payload.response.JwtResponse∂
-≥
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.javaD H(
-%20"äes.uclm.esi.payload.response.JwtResponse#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V*1
-/
-%19(es.uclm.esi.payload.response.JwtResponse*
-
-jwtjava.lang.String*
-
-%16java.lang.String*
-
-%17java.lang.String*
-
-%18java.lang.String*
-
-rolesjava.util.List·
-ﬁ
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.javaD	 H(.
-%21'org.springframework.http.ResponseEntity"gorg.springframework.http.ResponseEntity#ok(Ljava/lang/Object;)Lorg/springframework/http/ResponseEntity;*+")
-'org.springframework.http.ResponseEntity*1
-/
-%19(es.uclm.esi.payload.response.JwtResponse"ó
-c
-YC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/AuthController.javaD H(0
-.
-%21'org.springframework.http.ResponseEntity:8
-loginRequest(es.uclm.esi.payload.request.LoginRequestB)'
-%es.uclm.esi.controller.AuthController

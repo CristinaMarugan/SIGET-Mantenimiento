@@ -1,15 +1,0 @@
-
-…es.uclm.esi.security.WebSecurityConfig#authenticationManagerBean()Lorg/springframework/security/authentication/AuthenticationManager;d
-ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java0 0(7"1*™
-1d
-ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java1	 1(ù
-ö
-d
-ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java1	 1(*G
-%0Aorg.springframework.security.authentication.AuthenticationManager"¼org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter#authenticationManagerBean()Lorg/springframework/security/authentication/AuthenticationManager;*
-"""±
-d
-ZC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/WebSecurityConfig.java1 1(+I
-G
-%0Aorg.springframework.security.authentication.AuthenticationManagerB*(
-&es.uclm.esi.security.WebSecurityConfig
