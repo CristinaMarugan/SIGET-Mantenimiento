@@ -124,5 +124,5 @@ public class ConvocarReunionStepDefinitions extends SpringIntegrationTest{
 		}catch (Exception e) {
 			fail("Se ha lanzado una excepcion inesperada: " + e);
 		}
-	}
+	}//hola
 }
