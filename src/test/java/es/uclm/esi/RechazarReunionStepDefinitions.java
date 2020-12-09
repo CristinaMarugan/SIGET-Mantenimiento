@@ -33,7 +33,7 @@ public class RechazarReunionStepDefinitions extends SpringIntegrationTest {
  Map<String, Integer> params = new HashMap<String, Integer>();
  Integer codigo;
  HttpHeaders headers = new HttpHeaders();
- ControllerCancelarAceptarReunion controller = new ControllerCancelarAceptarReunion();
+ private ControllerCancelarAceptarReunion controller = new ControllerCancelarAceptarReunion();
  @Autowired
  JwtUtils jwtUtils;
  @Autowired
@@ -44,41 +44,43 @@ public class RechazarReunionStepDefinitions extends SpringIntegrationTest {
  @When("rechazo la reunion")
  public void rechazo_la_reunion() {
   Authentication authentication = authenticationManager
-    .authenticate(new UsernamePasswordAuthenticationToken("Elisa", "Seguridad2020"));
+    .authenticate(new UsernamePasswordAuthenticationToken("manu", "manu"));
   SecurityContextHolder.getContext().setAuthentication(authentication);
   String token = jwtUtils.generateJwtToken(authentication);
   headers.set("Authorization", "Bearer " + token);
-
-  // Creo una reunion para rechazarla
+  
+  //Creo siempre una reunion para eliminar
   Reunion reunion = new Reunion();
-  int id = 11119;
+  int id = 11120;
   ArrayList<Asistente> asistentes = new ArrayList<>();
   reunion.setId(id);
   reunion.setOrganizador("Elisa");
   reunion.setTitulo("TestRechazarReunion");
-  reunion.setEstado("pendiente");
-  reunion.setDia(25);
+  reunion.setEstado("aceptada");
+  reunion.setDia(20);
   reunion.setMes(12);
   reunion.setAno(2020);
   reunion.setHora("11:00");
-  reunion.setDescripcion("TestRechazarReunion");
+  reunion.setDescripcion("TestCancelarReunion");
   asistentes.add(new Asistente("manu", "pendiente"));
   asistentes.add(new Asistente("jaime", "pendiente"));
-  asistentes.add(new Asistente("elisa", "pendiente"));
   reunion.setAsistentes(asistentes);
 
   rReuniones.save(reunion);
+
   params.put("id", id);
-
-
   HttpEntity<Map<String, Integer>> request = new HttpEntity<>(params, headers);
   try {
+      
       response = restTemplate.postForEntity(url, request, String.class);
       codigo = response.getStatusCode().value();
   } catch (HttpClientErrorException e) {
       codigo = e.getRawStatusCode();
   }
-    rReuniones.delete(reunion); 
+  
+  rReuniones.delete(reunion);
+
+
  }
 
  @Then("la respuesta a rechazar debe ser {int}")
