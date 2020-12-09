@@ -10,4 +10,3 @@ target/surefire-reports/TEST-JUnit Vintage.xml
 *.lst
 *.txt
 *.xml
-/target/
