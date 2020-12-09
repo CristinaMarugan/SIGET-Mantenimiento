@@ -23,6 +23,7 @@ import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.Reunion;
 import es.uclm.esi.repository.RepositoryReuniones;
 import es.uclm.esi.security.jwt.JwtUtils;
+import io.cucumber.java.After;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -48,8 +49,8 @@ public class RechazarReunionStepDefinitions extends SpringIntegrationTest {
   SecurityContextHolder.getContext().setAuthentication(authentication);
   String token = jwtUtils.generateJwtToken(authentication);
   headers.set("Authorization", "Bearer " + token);
-  
-  //Creo siempre una reunion para eliminar
+
+  // Creo siempre una reunion para eliminar
   Reunion reunion = new Reunion();
   int id = 11120;
   ArrayList<Asistente> asistentes = new ArrayList<>();
@@ -71,15 +72,14 @@ public class RechazarReunionStepDefinitions extends SpringIntegrationTest {
   params.put("id", id);
   HttpEntity<Map<String, Integer>> request = new HttpEntity<>(params, headers);
   try {
-      
-      response = restTemplate.postForEntity(url, request, String.class);
-      codigo = response.getStatusCode().value();
-  } catch (HttpClientErrorException e) {
-      codigo = e.getRawStatusCode();
-  }
-  
-  rReuniones.delete(reunion);
 
+   response = restTemplate.postForEntity(url, request, String.class);
+   codigo = response.getStatusCode().value();
+  } catch (HttpClientErrorException e) {
+   codigo = e.getRawStatusCode();
+  }
+
+   rReuniones.delete(reunion);
 
  }
 
