@@ -1,12 +1,8 @@
 Feature: Login
-
-	#Background:
-   # Given baseUri is https://siget-mantenimiento.herokuapp.com/;
     
   Scenario: Buen Login
     When Hago login con "manu" y "manu"
     Then el codigo de respuesta debe ser 200
-    
 
   Scenario: Mal Login
     When Hago login con "manu" y "Admin1233"
