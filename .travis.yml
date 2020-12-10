@@ -1,14 +1,9 @@
 language: java
 install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=CarrivasUclm_SIGET-Equipo3
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent verify sonar:sonar
 before_install:
 - chmod +x mvnw
-addons:
-  sonarcloud:
-    organization: agibilibus
-    token:
-      secure: bi0AZguUW+UEgfXOY5cJ4N6KlHBhhrNtPkhHt8tMGVgyVwtxVzGdqu4/Is4AAp+reuIT97qkVPzdT3a8mNPRtj2BGlg4tfds4Hbr55vfauj/pHeps3yU10sxq8x9cskEyMw+qq9GmYnufwNid2NuvfQVBhBJ1rE9xwn9o14r698BLvcdmp5bY/kEs7TGhfWWHnhZd8PxWc7Ha7XTMVR2aa/vXOq+9oRc+wHuqcjenvBEyeCpSlqnibepPfFzArP+M0zlWjGwp1iIZ/OmNxjoc6DRwTGiN0kFHhu+UVcKG/cvXCtqQnwnhd2hYjI6wp7hnoP42Z7NmmbU5deWGJ1y0KfpTog8ayb6sqddMP4qmmaeIlQZEiOxw42oh4v4yszqqM87tTBoI+5cS1FMbTvmM4sXUEe3DETXe9dfBKczTtcsQJiCtQNb/e0PfqCwAqAZ+9E7TM/hyOuxz4EULrumRjCzqDhbDpvifKvE1yxDtfjaKg/EGBvFdUQfys4DKN42XenweMoFKvoiKLMPrXCAEjIGvc4hhMPjlPnV+zPRXViFIClc8fIQOvpxrwdXnS1m65kn8+h8W7pIUJUywQDWtOGI7Yj61Ov2RUupzlQe06Y/ii11yWTne1ny6zOnbaGrFQHlILvCqvvJHralumdXGOx+1Ou8eU/4Jdm5qseoXgk=
 deploy:
   provider: heroku
   app: siget-mantenimiento

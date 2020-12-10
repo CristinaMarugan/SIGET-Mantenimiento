@@ -1,7 +1,5 @@
 -------------------------------------------------------------------------------
 Test set: es.uclm.esi.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.326 s <<< FAILURE! - in es.uclm.esi.RunCucumberTest
-cancelar  Time elapsed: 3.294 s  <<< ERROR!
-java.lang.NullPointerException
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.615 sec - in es.uclm.esi.RunCucumberTest
 
