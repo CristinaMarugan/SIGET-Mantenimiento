@@ -1,8 +1,33 @@
-# SIGET-Equipo3
+# Sprint de mantenimiento
 
-Deploy: https://siget-equipo3.herokuapp.com  
-Zenhub: https://app.zenhub.com/workspaces/siget-5fa305767ab53b0015d2e422/board  
-Sonar: Ejecutar spring-boot:start verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.login=8f8cfde8ed13ed07786aa25dc05135e0e0e674bc  -Dsonar.sources=src/main/java,src/main/resources -Dsonar.branch.name=sonar spring-boot:stop
+## Heroku
 
-# INFORMES
-Informe de calidad (1 Sprint): https://drive.google.com/file/d/1xfCVMe-HsKZsE8o9c7cLBQ0OV3-TyfJT/view?usp=sharing
+[![Heroku](https://heroku-badge.herokuapp.com/?app=siget-mantenimiento)](https://siget-mantenimiento.herokuapp.com/)
+
+## Travis
+
+[![Build Status](https://travis-ci.com/CarrivasUclm/SIGET-Equipo3.svg?branch=develop)](https://travis-ci.com/CarrivasUclm/SIGET-Equipo3)
+
+## Sonarcloud
+
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=CarrivasUclm_SIGET-Equipo3&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=CarrivasUclm_SIGET-Equipo3)
+
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=CarrivasUclm_SIGET-Equipo3&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=CarrivasUclm_SIGET-Equipo3)
+
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=CarrivasUclm_SIGET-Equipo3&metric=security_rating)](https://sonarcloud.io/dashboard?id=CarrivasUclm_SIGET-Equipo3)
+
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=CarrivasUclm_SIGET-Equipo3&metric=coverage)](https://sonarcloud.io/dashboard?id=CarrivasUclm_SIGET-Equipo3)
+
+## Equipo Agibílibus
+
+- Pilar Hernán Valencia
+
+- Jaime Jiménez Catalán
+
+- Elisa Jiménez Riaza
+
+- Cristina Marugán Martín
+
+- Manuel Puente Díaz
+
+- Carlos Rivas Cruz
