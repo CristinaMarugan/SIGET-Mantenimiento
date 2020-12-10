@@ -3,7 +3,7 @@
 	margin: auto;
 }
 
-/*cabecera de la p√°gina*/
+/*cabecera de la p·gina*/
 #titulo {
 	margin-left: 100px;
 	margin-right: 100px;
@@ -59,7 +59,7 @@
 	border: 2px double coral;
 }
 
-/*l√≠nea de la fecha actual*/
+/*lÌnea de la fecha actual*/
 #fechaactual {
 	font: bold 12pt arial;
 	padding: 0.4em
@@ -164,18 +164,7 @@
 	cursor: pointer;
 }
 
-#cajainforeuniones {
-	border-color: #6495ED;
-	border-width: 4px;
-	border-style: solid;
-	max-height: 500px;
-	height: 500px;
-	max-width: 340px;
-	background-color: #5dade2;
-	text-align: left;
-	margin-left: 20px;
-	margin-bottom: 20px;
-}
+
 
 #inputtitulo, #inputhora, #inputdescripcion, #inputasistentes {
 	margin: 15px;
@@ -234,13 +223,25 @@
 }
 
 body {
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(242, 244, 244);
+	padding: 15px;
+	font-family: Arial;
 }
 
 #menu {
 	background-color: rgb(84, 153, 199);
 	margin-left: 30px;
 	margin-right: 30px;
+}
+
+
+#btn-convocar {
+	background-color: #4169E1
+}
+
+
+#btn-salir {
+	background-color: #FFFFFF
 }
 
 #ROL {

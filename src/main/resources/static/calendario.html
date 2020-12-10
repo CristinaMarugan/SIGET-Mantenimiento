@@ -1,33 +1,25 @@
-<!DOCTYPE html>
-<html lang="es"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es"> 
 	<head>
 		<title>Calendario</title> 
+
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 		<link rel="stylesheet" type="text/css" href="css/calendario.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="css/popups.css" media="all" />
+
+		<script type="text/javascript" src="js/funcionesCalendario.js"></script>
+		<script type="text/javascript" src="js/calendario.js"></script>
 	</head>
 	<body>
-        <nav class="navbar navbar-expand-lg navbar-inverse bg-inverse">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <a class="navbar-brand" href="#">SIGET</a>
-              </div>
-              <ul class="nav navbar-nav">
-                <li id="btn-convocar" class="btn-convocar" class="active" onclick="cargar()"><a href="#">Nueva Reunión</a></li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span id="btn-salir" onclick="location.href='index.html'; 	localStorage.clear();" class="glyphicon glyphicon-log-in"></span> Salir</a></li>
-              </ul>
-            </div>
-        </nav>
-
-
-        <!--
 		<div id="menu">
 			<div>
 			<ul>
@@ -39,7 +31,7 @@
 				
 			</ul>
 			</div>
-		</div>-->
+		</div>
 		<br>
 		<div id="cajas">
 			<div id="calendario">
@@ -87,29 +79,42 @@
 					<form id="formularioPreview"></form>
 				</div>
 			</div>
-			<div id="cajainforeuniones">
-				<form>
-					<div id="inputtitulo">
-						<label id="texttitulo">Titulo:</label>
-						<input type="text" id="titureunion" name="titureunion" maxlength="80" size="35" readonly>	
-					</div>
-					<div id="inputhora">
-						<label id="texthora">Hora:</label>
-						<input type="text" id="horareunion" name="horareunion" maxlength="5" size="4" readonly>
-					</div>
-					<div id="inputdescripcion">
-						<label id="textdescripcion">Descripción:</label><br>
-						<textarea id="descripcion" name="descripcion" rows="7" cols="40" readonly></textarea><br>
-					</div>
-					<div id="inputasistentes">
-						<label id="textasistentes">Asistentes:</label><br>
-						<textarea id="asistentes" name="asistentes" rows="7" cols="40" readonly></textarea>
-					</div>
-					<div id="inputbotones" align = center>
-						<a class="botonAceptar" onclick="aceptarReunion()">Aceptar</a>
-						<a class="botonRechazar" onclick="rechazarReunion()">Rechazar</a>
-					</div>
-				</form>
+			<div id="cajainforeuniones" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">×</span> <span class="sr-only">close</span>
+							</button>
+							<h4 id="modalTitle" class="modal-title"><strong>Datos de Reunión</strong></h4>
+						</div>
+						<div id="modalBody" class="modal-body">
+							<form>
+								<div id="inputtitulo">
+									<label id="texttitulo">Titulo:</label>
+									<input type="text" id="titureunion" name="titureunion" maxlength="80" size="35" readonly>	
+								</div>
+								<div id="inputhora">
+									<label id="texthora">Hora:</label>
+									<input type="text" id="horareunion" name="horareunion" maxlength="5" size="4" readonly>
+								</div>
+								<div id="inputdescripcion">
+									<label id="textdescripcion">Descripción:</label><br>
+									<textarea id="descripcion" name="descripcion" class="form-control" rows="7" cols="40" readonly></textarea><br>
+								</div>
+								<div id="inputasistentes">
+									<label id="textasistentes">Asistentes:</label><br>
+									<textarea id="asistentes" name="asistentes" class="form-control" rows="7" cols="40" readonly></textarea>
+								</div>
+								<div id="inputbotones" align = center>
+									<a class="btn btn-success" onclick="aceptarReunion()">Aceptar</a>
+									<a class="btn btn-danger" onclick="rechazarReunion()">Rechazar</a>
+									<button id="btn-modificar" class="btn btn-warning">Modificar Reunión</button>
+									<button id="btn-cancelar" class="btn btn-danger" onclick="cancelar()">Cancelar Reunión</button>
+								</div>
+							</form>
+						</div>
+				</div>
 			</div>
 			<div class="overlay" id="overlay">
 				<div class="popup" id="popup">
@@ -133,8 +138,6 @@
 				</div>
 			</div>
 		</div>
-        <script type="text/javascript" src="js/popups.js"></script>
-        <script type="text/javascript" src="js/funcionesCalendario.js"></script>
-		<script type="text/javascript" src="js/calendario.js"></script>
+		<script type="text/javascript" src="popups.js"></script>
 	</body>
 </html>
