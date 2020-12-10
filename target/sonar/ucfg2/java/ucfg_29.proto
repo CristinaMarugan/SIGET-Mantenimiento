@@ -1,155 +1,0 @@
-
-ses.uclm.esi.controller.ControllerConvocarReunion#getAsistentes(Ljava/util/Map;Ljava/lang/String;)Ljava/lang/String;n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javae e("startingBlock*Ï
-2n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javaj j(°
-û
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javaj j(
-useres.uclm.esi.model.User"__id*
-"" 
-«
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javaj j(
-useres.uclm.esi.model.User"
-__arrayGet*!
-
-listaUsuariosjava.util.List*
-""*
-3
-1*è
-3n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javak k(ÙÒ
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javak k(
-%6java.lang.String"6es.uclm.esi.model.User#getUsername()Ljava/lang/String;* 
-
-useres.uclm.esi.model.User2getUsername()ùö
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javak k(
-%7org.json.JSONArray">org.json.JSONArray#put(Ljava/lang/Object;)Lorg/json/JSONArray;*
-
-jsaorg.json.JSONArray*
-
-%6java.lang.String2put(Ljava/lang/Object;)*
-2*ß
-
-startingBlockn
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javae f(0‡
-›
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javad d(5
-%10"
-__annotate*<:
-8org.springframework.security.access.prepost.PreAuthorize*
-
-entradajava.util.Map§
-°
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javae> e(E
-entradajava.util.Map"__annotation*
-
-%10·
-ﬁ
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javad d(5
-%11"
-__annotate*<:
-8org.springframework.security.access.prepost.PreAuthorize*
-
-tokenjava.lang.Stringﬁ
-€
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javaf f("
-%12"
-__annotate*97
-5org.springframework.web.bind.annotation.RequestHeader*
-
-tokenjava.lang.StringÆ
-´
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javaf* f(/
-tokenjava.lang.String"__annotation*
-
-%11*
-
-%12†ù
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javae e(F
-entradajava.util.Map"java.util.HashMap*
-5*≈
-5n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javag g('£†
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javag g(%
-%0org.json.JSONObject"org.json.JSONObjectµ
-≤
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javag g('
-%1"org.json.JSONObject#<init>()V*
-
-%0org.json.JSONObject∂
-≥
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javag g((
-jsoresporg.json.JSONObject"__id*
-
-%0org.json.JSONObject°û
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javah h(
-%2org.json.JSONArray"org.json.JSONArray≥
-∞
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javah h(!
-%3"org.json.JSONArray#<init>()V*
-
-%2org.json.JSONArray∞
-≠
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javah h("
-jsaorg.json.JSONArray"__id*
-
-%2org.json.JSONArrayÍ
-Á
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javai i(%+
-%4%es.uclm.esi.repository.UserRepository"__id*B*@2
-0es.uclm.esi.controller.ControllerConvocarReunion"
-
-usuariosÑÅ
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javai i(/
-%5java.util.List"?es.uclm.esi.repository.UserRepository#findAll()Ljava/util/List;*-
-+
-%4%es.uclm.esi.repository.UserRepository2	findAll()≤
-Ø
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javai i(0
-listaUsuariosjava.util.List"__id*
-
-%5java.util.List*
-2*À
-1n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javam m(	⁄◊
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javam m(
-%8org.json.JSONObject"Rorg.json.JSONObject#put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;* 
-
-jsoresporg.json.JSONObject*
-
-usuarios*
-
-jsaorg.json.JSONArray2)put(Ljava/lang/String;Ljava/lang/Object;)ÎË
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javan	 n(
-%9java.lang.String"0org.json.JSONObject#toString()Ljava/lang/String;* 
-
-jsoresporg.json.JSONObject2
-toString()"ä
-n
-dC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/ControllerConvocarReunion.javan n(
-
-%9java.lang.String:
-entradajava.util.Map:
-tokenjava.lang.StringB42
-0es.uclm.esi.controller.ControllerConvocarReunion

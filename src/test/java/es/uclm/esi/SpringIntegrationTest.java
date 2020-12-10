@@ -15,4 +15,5 @@ public abstract class SpringIntegrationTest {
     
     protected final String DEFAULT_URL = "https://siget-mantenimiento.herokuapp.com/";
 
+
 }

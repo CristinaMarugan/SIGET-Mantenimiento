@@ -1,88 +1,0 @@
-
-Yes.uclm.esi.controller.PruebaController#pruebaConexion(Ljava/util/Map;)Ljava/lang/String;e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java ( "startingBlock*î
-startingBlocke
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java  (Iñì
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java! (H
-pruebajava.util.Map"java.util.HashMap*
-1*È
-1e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java  (&öó
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java (
-%0org.json.JSONObject"org.json.JSONObject÷
-”
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java ('
-%1",org.json.JSONObject#<init>(Ljava/util/Map;)V*
-
-%0org.json.JSONObject*
-
-pruebajava.util.Map©
-¶
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java ((
-jsoorg.json.JSONObject"__id*
-
-%0org.json.JSONObjectì
-ê
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java (
-%2java.io.PrintStream"__id*
-""ËÂ
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java6 (F	
-%3int"/org.json.JSONObject#getInt(Ljava/lang/String;)I*
-
-jsoorg.json.JSONObject*
-id2getInt(Ljava/lang/String;)º
-π
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java (F
-%4java.lang.String"__concat*!
-Pues mira me ha llegao esto: *
-	
-%3int¸˘
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java (G
-
-%5void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%2java.io.PrintStream*
-
-%4java.lang.String2println(Ljava/lang/String;)öó
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java ($
-%6org.json.JSONObject"org.json.JSONObject¨
-©
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java (&
-%7"org.json.JSONObject#<init>()V*
-
-%6org.json.JSONObject¨
-©
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java ('
-jsoretorg.json.JSONObject"__id*
-
-%6org.json.JSONObject∏µ
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java (
-%8org.json.JSONObject"Rorg.json.JSONObject#put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;*
-
-jsoretorg.json.JSONObject*
-hey*
-hola2)put(Ljava/lang/String;Ljava/lang/Object;)·ﬁ
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java ( 
-%9java.lang.String"0org.json.JSONObject#toString()Ljava/lang/String;*
-
-jsoretorg.json.JSONObject2
-toString()"Å
-e
-[C:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/controller/PruebaController.java (!
-
-%9java.lang.String:
-pruebajava.util.MapB+)
-'es.uclm.esi.controller.PruebaController
