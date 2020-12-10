@@ -8,4 +8,4 @@ Then la respuesta debe ser <codigo>
   
 Examples:
 	| codigo | 
-  | 200 | 
+  | 400 | 

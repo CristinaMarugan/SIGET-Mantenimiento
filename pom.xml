@@ -113,8 +113,8 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
 				<configuration>
-					<testFailureIgnore>true</testFailureIgnore>
-				</configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
 			</plugin>
 
 			<plugin>
