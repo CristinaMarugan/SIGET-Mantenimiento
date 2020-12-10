@@ -1,8 +1,5 @@
 -------------------------------------------------------------------------------
 Test set: es.uclm.esi.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.334 sec <<< FAILURE! - in es.uclm.esi.RunCucumberTest
-convocar reunion #2(Convocar)  Time elapsed: 0.239 sec  <<< FAILURE!
-java.lang.AssertionError: Se ha lanzado una excepcion inesperada: org.springframework.security.authentication.BadCredentialsException: Bad credentials
-
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.704 sec - in es.uclm.esi.RunCucumberTest
 
