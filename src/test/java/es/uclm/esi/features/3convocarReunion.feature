@@ -1,20 +1,18 @@
-#Feature: Convocar
+Feature: Convocar
 
     
-#  Scenario Outline: convocar
-#  	When titulo es <titulo>
-#  	And dia es <dia>
-#  	And mes es <mes>
-#  	And ano es <ano>
-#  	And hora es <hora>
-#  	And descripcion es <descripcion>
-#  	And asistentes son <asistentes>
-#  	Then convoco la reunion
-#  	Then la respuesta a convocar sera <codigo>
-  
-#  Examples:
-#  |	titulo	|		dia	|	mes	|	ano	|	hora	| descripcion |	asistentes	|	codigo	|
-#  |	"Reunion 1"	|	52	|	12	|	2020	|	"22:00"	| "Prueba" |	"Fatima:pendiente,Victor:pendiente,admin:pendiente"	|	400	|
-#  |	"Reunion 2"	|	11	|	15	|	2020	|	"16:00"	|	"Prueba" |	"Fatima:pendiente,Victor:pendiente,admin:pendiente"	|	400	|
-#  |	"test"	|	31	|	12	|	2020	|	"23:00"	|	"test" |	"admin:pendiente"	|	200	|
-  
+  Scenario Outline: convocar reunion
+  	Given Me autentico como usuario existente en el sistema y usuario es <usuario> y password es <password>
+  	When convoco la reunion y titulo es <titulo>
+	  	And dia es <dia>
+	  	And mes es <mes>
+	  	And ano es <ano>
+	  	And hora es <hora>
+	  	And descripcion es <descripcion>
+	  	And asistentes son <asistentes>
+  	Then la respuesta a convocar sera <codigo>
+ 
+  Examples:
+  | usuario   | password  | titulo            | dia	|	mes	|	ano	  |	hora    | descripcion       | asistentes                                              |	codigo |
+  | "jaime"   | "jaime"   | "reunion jaime"   |	3	  |	12	|	2020	|	"11:55"	|	"reunion jaime"   |	"Elisa:pendiente, pepe:Rechazado, jaime:aceptada"	    |	200    |
+  | "equipo3" | "equipo3" | "reunion equipo3" |	3	  |	12	|	2020	|	"11:55"	|	"reunion equipo3" |	"Elisa:pendiente,pepe:Rechazado,jaime:aceptada"	    |	400    |
