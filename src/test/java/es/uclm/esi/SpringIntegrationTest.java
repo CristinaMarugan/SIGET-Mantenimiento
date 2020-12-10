@@ -10,9 +10,9 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootTest(classes = SigetApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 
 public abstract class SpringIntegrationTest {
-
- protected RestTemplate restTemplate = new RestTemplate();
-
- protected final String DEFAULT_URL = "https://siget-mantenimiento.herokuapp.com/";
+	
+    protected RestTemplate restTemplate = new RestTemplate();
+    
+    protected final String DEFAULT_URL = "https://siget-mantenimiento.herokuapp.com/";
 
 }
