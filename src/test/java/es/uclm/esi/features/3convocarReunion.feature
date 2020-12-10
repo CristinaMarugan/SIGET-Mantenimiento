@@ -14,5 +14,5 @@ Feature: Convocar
  
   Examples:
   | usuario   | password  | titulo            | dia	|	mes	|	ano	  |	hora    | descripcion       | asistentes                                              |	codigo |
-  | "jaime"   | "jaime"   | "reunion jaime"   |	3	  |	12	|	2020	|	"11:55"	|	"reunion jaime"   |	"Elisa:pendiente, pepe:Rechazado, jaime:aceptada"	    |	200    |
-  | "equipo3" | "equipo3" | "reunion equipo3" |	3	  |	12	|	2020	|	"11:55"	|	"reunion equipo3" |	"Elisa:pendiente,pepe:Rechazado,jaime:aceptada"	    |	400    |
+  | "manu"    | "manu"    | "reunion jaime"   |	30  |	12	|	2020	|	"11:55"	|	"reunion jaime"   |	"Elisa:pendiente, pepe:Rechazado, jaime:aceptada"	      |	200    |
+  | "Elisa" | "Seguridad2020" | "reunion equipo3" |	9	  |	12	|	2020	|	"11:55"	|	"reunion equipo3" |	"Elisa:pendiente,pepe:Rechazado,jaime:aceptada"	        |	200    |
