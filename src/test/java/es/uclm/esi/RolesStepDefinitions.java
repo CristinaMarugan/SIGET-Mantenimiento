@@ -1,13 +1,10 @@
-/*package es.uclm.esi;
+package es.uclm.esi;
 
 import static org.junit.Assert.assertEquals;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -19,10 +16,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.client.HttpClientErrorException;
 
-import es.uclm.esi.payload.request.CalendarioDiaRequest;
-import es.uclm.esi.payload.request.CalendarioMesRequest;
 import es.uclm.esi.security.jwt.JwtUtils;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -44,12 +38,12 @@ public class RolesStepDefinitions extends SpringIntegrationTest{
 		String token;
 		if(string.equals("admin")) {
 			 authentication = authenticationManager.authenticate(
-					new UsernamePasswordAuthenticationToken("admin","Admin123"));
+					new UsernamePasswordAuthenticationToken("admin","admin"));
 			SecurityContextHolder.getContext().setAuthentication(authentication);
 			 token = jwtUtils.generateJwtToken(authentication);		
 		}else if(string.equals("user")) {
 			authentication = authenticationManager.authenticate(
-					new UsernamePasswordAuthenticationToken("trabajador1","Trabajador1"));
+					new UsernamePasswordAuthenticationToken("manu","manu"));
 			SecurityContextHolder.getContext().setAuthentication(authentication);
 			 token = jwtUtils.generateJwtToken(authentication);	
 		}else {
@@ -85,4 +79,4 @@ public class RolesStepDefinitions extends SpringIntegrationTest{
 	}
 	
 	
-}*/
+}
