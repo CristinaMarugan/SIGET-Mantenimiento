@@ -1,4 +1,4 @@
-/*package es.uclm.esi;
+package es.uclm.esi;
 
 import static org.junit.Assert.assertEquals;
 import java.util.HashMap;
@@ -38,7 +38,7 @@ public class AceptarReunionStepDefinitions extends SpringIntegrationTest {
 	@When("acepto la reunion")
 	public void acepto_la_reunion() {
 		Authentication authentication = authenticationManager.authenticate(
-				new UsernamePasswordAuthenticationToken("admin","Admin123"));
+				new UsernamePasswordAuthenticationToken("manu","manu"));
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 		String token = jwtUtils.generateJwtToken(authentication);
 		headers.set("Authorization", "Bearer " + token);
@@ -62,6 +62,4 @@ public class AceptarReunionStepDefinitions extends SpringIntegrationTest {
 		assertEquals(res, codigo);
 	}
 
-	
-
-}*/
+}

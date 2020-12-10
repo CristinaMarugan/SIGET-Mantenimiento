@@ -1,11 +1,11 @@
-#Feature: Aceptar
+Feature: Aceptar
 
-#  Scenario Outline: aceptar
+  Scenario Outline: aceptar
   
-#  When acepto la reunion 
-#  Then la respuesta a aceptar debe ser <codigo>
+  When acepto la reunion 
+  Then la respuesta a aceptar debe ser <codigo>
  
   
-#  Examples:
-#	| codigo | 
-#  | 200 | 
+  Examples:
+	| codigo | 
+  | 200 | 

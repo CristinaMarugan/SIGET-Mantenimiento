@@ -1,86 +1,0 @@
-
-|es.uclm.esi.security.services.UserDetailsImpl#build(Les/uclm/esi/model/User;)Les/uclm/esi/security/services/UserDetailsImpl;k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java( (($"1*ó
-1k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java)' )(+åâ
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java)' )(6
-%0java.util.Set"0es.uclm.esi.model.User#getRoles()Ljava/util/Set;* 
-
-useres.uclm.esi.model.User2
-getRoles()èå
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java)' )(?
-%1java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
-
-%0java.util.Set2stream()±®
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java)' *(C
-%2java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*
-
-%1java.util.stream.Stream*
-""2"map(Ljava/util/function/Function;)õ
-ò
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java+ +(  
-%3java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*"
-java.util.stream.CollectorsÃÀ
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java)' +(!
-%4java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*
-
-%2java.util.stream.Stream*"
- 
-%3java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)­
-ª
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java) +("
-authoritiesjava.util.List"__id*
-
-%4java.util.Liståâ
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java. .(
-%5java.lang.String"0es.uclm.esi.model.User#getId()Ljava/lang/String;* 
-
-useres.uclm.esi.model.User2getId()ñî
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java/ /(
-%6java.lang.String"6es.uclm.esi.model.User#getUsername()Ljava/lang/String;* 
-
-useres.uclm.esi.model.User2getUsername()ëè
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java0 0(
-%7java.lang.String"3es.uclm.esi.model.User#getEmail()Ljava/lang/String;* 
-
-useres.uclm.esi.model.User2
-getEmail()ñî
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java1 1(
-%8java.lang.String"6es.uclm.esi.model.User#getPassword()Ljava/lang/String;* 
-
-useres.uclm.esi.model.User2getPassword()ÔÑ
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java- -(3
-%9-es.uclm.esi.security.services.UserDetailsImpl"-es.uclm.esi.security.services.UserDetailsImplÏ
-Ì
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java-	 2(
-%10"•es.uclm.esi.security.services.UserDetailsImpl#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*5
-3
-%9-es.uclm.esi.security.services.UserDetailsImpl*
-
-%5java.lang.String*
-
-%6java.lang.String*
-
-%7java.lang.String*
-
-%8java.lang.String*
-
-authoritiesjava.util.List"¤
-k
-aC:/Users/gerol/git/SIGET-Equipo3/src/main/java/es/uclm/esi/security/services/UserDetailsImpl.java- 2(5
-3
-%9-es.uclm.esi.security.services.UserDetailsImpl:
-useres.uclm.esi.model.UserB1"/
--es.uclm.esi.security.services.UserDetailsImpl
