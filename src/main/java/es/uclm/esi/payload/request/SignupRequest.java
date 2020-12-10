@@ -3,6 +3,8 @@ package es.uclm.esi.payload.request;
 import java.util.Set;
 
 import javax.validation.constraints.*;
+
+import org.joda.time.DateTime;
  
 public class SignupRequest {
     @NotBlank
@@ -19,6 +21,16 @@ public class SignupRequest {
     @NotBlank
     @Size(min = 6, max = 40)
     private String password;
+
+	private String nombre;
+
+	private DateTime nacimiento;
+
+	private String dni;
+
+	private int tlf;
+
+	private String apellidos;
   
     public String getUsername() {
         return username;
@@ -51,4 +63,24 @@ public class SignupRequest {
     public void setRole(Set<String> roles) {
       this.roles = roles;
     }
+
+	public String getNombre() {
+		return this.nombre;
+	}
+
+	public String getApellidos() {
+		return this.apellidos;
+	}
+
+	public int getTelefono() {
+		return this.tlf;
+	}
+
+	public String getDni() {
+		return this.dni;
+	}
+
+	public DateTime getNacimiento() {
+		return this.nacimiento;
+	}
 }

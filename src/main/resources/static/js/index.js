@@ -14,7 +14,8 @@ function SignUp() {
         type : "Register",
         username : $("#SignUpName").val(),
         email : $("#SignUpEmail").val(),
-        password : $("#pwd1").val()
+        password : $("#pwd1").val(),
+        
     };
     var data = {
             data : JSON.stringify(info),
