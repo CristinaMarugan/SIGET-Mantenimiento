@@ -234,31 +234,13 @@
 }
 
 body {
-	background-color: rgb(242, 244, 244);
-	padding: 15px;
-	font-family: Arial;
+	background-color: rgb(255, 255, 255);
 }
 
 #menu {
 	background-color: rgb(84, 153, 199);
 	margin-left: 30px;
 	margin-right: 30px;
-}
-
-#btn-modificar {
-	background-color: #4169E1;
-}
-
-#btn-convocar {
-	background-color: #4169E1
-}
-
-#btn-cancelar {
-	background-color: #ff8080
-}
-
-#btn-salir {
-	background-color: #FFFFFF
 }
 
 #ROL {
