@@ -1,5 +1,5 @@
 language: java
-install: mvn install -Djavax.net.ssl.trustStore=D:\mongoDBFiles\mongodbStore -Djavax.net.ssl.trustStorePassword=password -Djavax.security.auth.useSubjectCredsOnly=false
+install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
 - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent verify sonar:sonar
 before_install:
