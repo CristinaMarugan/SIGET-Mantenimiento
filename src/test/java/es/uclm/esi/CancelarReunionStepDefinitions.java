@@ -2,11 +2,14 @@ package es.uclm.esi;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -14,6 +17,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.client.HttpClientErrorException;
 
+import es.uclm.esi.controller.ControllerCancelarAceptarReunion;
+import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.Reunion;
 import es.uclm.esi.repository.RepositoryReuniones;
 import es.uclm.esi.security.jwt.JwtUtils;

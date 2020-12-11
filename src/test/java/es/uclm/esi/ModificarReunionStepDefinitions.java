@@ -1,6 +1,7 @@
-package es.uclm.esi;
+/*package es.uclm.esi;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +16,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.Reunion;
 import es.uclm.esi.repository.RepositoryCalendarioPersonal;
+import es.uclm.esi.repository.RoleRepository;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -144,4 +146,4 @@ public class ModificarReunionStepDefinitions extends SpringIntegrationTest {
 		}
 	}
 
-}
+}*/

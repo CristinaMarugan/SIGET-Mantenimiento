@@ -1,4 +1,4 @@
-package es.uclm.esi;
+/*package es.uclm.esi;
 
 import static org.junit.Assert.assertEquals;
 
@@ -39,14 +39,14 @@ public class CalendarioStepDefinitions extends SpringIntegrationTest {
 	public void consulto_con_el_usuario(String string) {
 		Authentication authentication;
 		String token;
-		if(string.equals("manu")) {
+		if(string.equals("ejemplo1c")) {
 			 authentication = authenticationManager.authenticate(
-					new UsernamePasswordAuthenticationToken("manu","manu"));
+					new UsernamePasswordAuthenticationToken("ejemplo1c","Ejemplo1"));
 			SecurityContextHolder.getContext().setAuthentication(authentication);
 			 token = jwtUtils.generateJwtToken(authentication);		
-		}else if(string.equals("Elisa")) {
+		}else if(string.equals("ejemplo2c")) {
 			authentication = authenticationManager.authenticate(
-					new UsernamePasswordAuthenticationToken("Elisa","Seguridad2020"));
+					new UsernamePasswordAuthenticationToken("ejemplo2c","Ejemplo2"));
 			SecurityContextHolder.getContext().setAuthentication(authentication);
 			 token = jwtUtils.generateJwtToken(authentication);	
 		}else {
@@ -128,4 +128,4 @@ public class CalendarioStepDefinitions extends SpringIntegrationTest {
 		}
 	}
 
-}
+}*/

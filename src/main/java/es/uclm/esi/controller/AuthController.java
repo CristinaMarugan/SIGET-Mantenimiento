@@ -7,7 +7,6 @@ import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
-import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -90,8 +89,7 @@ public class AuthController {
 		// Create new user's account
 		User user = new User(signUpRequest.getUsername(), 
 							 signUpRequest.getEmail(),
-							 encoder.encode(signUpRequest.getPassword()), signUpRequest.getNombre(),  signUpRequest.getApellidos(), signUpRequest.getTelefono(), signUpRequest.getDni(),
-							 signUpRequest.getNacimiento());
+							 encoder.encode(signUpRequest.getPassword()));
 		
 		//lo de arriba lo comento ya que solo se registra el usuario como USER y el rol solo se lo puede asignar un admin en el panel (no implementado)
 		Set<Role> roles = new HashSet<>();

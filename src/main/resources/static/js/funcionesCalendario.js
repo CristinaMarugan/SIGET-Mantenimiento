@@ -120,6 +120,7 @@ function mostrarInfoReunion(idReunion,diaReunion){
     
     var asistentes = document.getElementById("asistentes");
     asistentes.setAttribute("placeholder",strasistentes);
+    $('#cajainforeuniones').modal();
 }
 
 function getDetallesReuniones(){
