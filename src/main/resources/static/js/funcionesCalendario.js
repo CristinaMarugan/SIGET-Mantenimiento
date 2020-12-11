@@ -100,6 +100,7 @@ function detallesEnBlanco(){
 }
 
 function mostrarInfoReunion(idReunion,diaReunion){
+	var invitacionRespondida = false;
     var jsonMostrar = getDetallesReunionDiaC();
     
     identificador = jsonMostrar.reuniones[idReunion-1].identificador;
@@ -116,6 +117,21 @@ function mostrarInfoReunion(idReunion,diaReunion){
 	var strasistentes = "";
     for(var i = 0; i < jsonMostrar.reuniones[idReunion-1].asistentes.length; i++){
 		strasistentes+=jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario+"\n";
+		if (jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario == localStorage.rol) 
+			if(jsonMostrar.reuniones[idReunion-1].asistentes[i].estado == "Aceptado")
+				invitacionRespondida = true;
+    }
+    
+    if(invitacionRespondida){
+    	ocultarBoton("btn-aceptar");
+    	ocultarBoton("btn-rechazar");
+    	mostrarBoton("btn-modificar");
+    	mostrarBoton("btn-cancelar");
+    } else{
+    	mostrarBoton("btn-aceptar");
+    	mostrarBoton("btn-rechazar");
+    	ocultarBoton("btn-modificar");
+    	ocultarBoton("btn-cancelar");
     }
     
     var asistentes = document.getElementById("asistentes");
@@ -370,4 +386,12 @@ function cargar() {
         option.innerHTML = asistentesConvocar.usuarios[i];
         select.appendChild(option);
     }
+}
+
+function mostrarBoton(idBoton){
+	document.getElementById(idBoton).style.display = 'block';
+}
+
+function ocultarBoton(idBoton){
+	document.getElementById(idBoton).style.display = 'none';
 }
