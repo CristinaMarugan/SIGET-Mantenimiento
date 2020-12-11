@@ -24,8 +24,6 @@
 			<div>
 			<ul>
 				<li><button id="btn-convocar" class="btn-convocar" onclick="cargar()">CONVOCAR REUNIÓN</button></li>
-				<li><button id="btn-modificar" class="btn-modificar">MODIFICAR REUNIÓN</button></li>
-				<li><button id="btn-cancelar" class="btn-cancelar" onclick="cancelar()">CANCELAR REUNIÓN</button></li>
 				<li><label id="ROL" class="LabelRol"></label></li>
 				<li class="item-r"><button id="btn-salir" class="btn-salir" onclick="location.href='index.html'; 	localStorage.clear();">SALIR</button></li>
 				
@@ -112,15 +110,22 @@
 								<div id="inputbotones" align = center>
 									<a class="btn btn-success" onclick="aceptarReunion()">Aceptar</a>
 									<a class="btn btn-danger" onclick="rechazarReunion()">Rechazar</a>
-									<button id="btn-modificar" class="btn btn-warning">Modificar Reunión</button>
-									<button id="btn-cancelar" class="btn btn-danger" onclick="cancelar()">Cancelar Reunión</button>
+									<button id="btn-modificar" class="btn btn-primary">Modificar Reunión</button>
+									<button id="btn-cancelar" class="btn btn-primary" onclick="cancelar()">Cancelar Reunión</button>
 								</div>
 							</form>
 						</div>
 				</div>
 			</div>
-			<div class="overlay" id="overlay">
-				<div class="popup" id="popup">
+			<div id="convocar" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">×</span> <span class="sr-only">close</span>
+							</button>
+							<h4 id="modalTitle" class="modal-title"><strong>Datos de Reunión</strong></h4>
+						</div>
 					<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><em class="fas fa-times"></em></a>
 					<h3>CONVOCAR REUNIÓN</h3>
 					<form action="">
