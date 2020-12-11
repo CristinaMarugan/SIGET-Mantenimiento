@@ -225,23 +225,26 @@ function reunionesMes(mesConcreto, anoConcreto){ //Recibirá las reuniones de un
 }
 
 function cancelar() {
-	var info = {
-		id : identificador
-	};
-	$.ajax({
-		url : '/reunion/cancelar',
-        async : false,
-        data : JSON.stringify(info),
-        type : "post",
-        headers: { 'Authorization': localStorage.getItem("jwt") },
-        contentType: 'application/json',
-        success : function(response) {
-        	recarga();
-        },
-        error : function(response) {
-            console.log('Se produjo un problema cancelando reunion');
-        }
-    });
+	var opcion = confirm("¿Estás seguro que no desea asisitir a esta reunión?");
+	if (opcion == true) {
+		var info = {
+			id : identificador
+		};
+		$.ajax({
+			url : '/reunion/cancelar',
+	        async : false,
+	        data : JSON.stringify(info),
+	        type : "post",
+	        headers: { 'Authorization': localStorage.getItem("jwt") },
+	        contentType: 'application/json',
+	        success : function(response) {
+	        	recarga();
+	        },
+	        error : function(response) {
+	            console.log('Se produjo un problema cancelando reunion');
+	        }
+	    });
+	}
 }
 
 function aceptarReunion() {
@@ -261,19 +264,24 @@ function aceptarReunion() {
 }
 
 function rechazarReunion() {
-    var info = {
-        id: identificador
-    }
-    $.ajax({
-		url : '/reunion/rechazar',
-        async : false,
-        data : JSON.stringify(info),
-        type : "post",
-        dataType: 'json',
-        headers: { 'Authorization': localStorage.getItem("jwt") },
-        contentType: 'application/json',
-        success : recarga()
-    });
+
+	var opcion = confirm("¿Estás seguro que no desea asisitir a esta reunión?");
+	
+	if (opcion == true) {
+	 var info = {
+		        id: identificador
+		    }
+		    $.ajax({
+				url : '/reunion/rechazar',
+		        async : false,
+		        data : JSON.stringify(info),
+		        type : "post",
+		        dataType: 'json',
+		        headers: { 'Authorization': localStorage.getItem("jwt") },
+		        contentType: 'application/json',
+		        success : recarga()
+		    });
+	} 
 }
 
 function getDetallesReunionDiaC(){

@@ -76,7 +76,10 @@ public class ControllerCancelarAceptarReunion {
 
 		for (int i = 0; i < reunion.getAsistentes().size(); i++) {
 			if (reunion.getAsistente(i).getUsuario().equals(asistente)) {
-				reunion.getAsistente(i).setEstado(estado);
+				if (estado.equals("Rechazado"))
+					reunion.getAsistentes().remove(i);
+				else
+					reunion.getAsistente(i).setEstado(estado);
 				encontrado = true;
 				rReuniones.save(reunion);
 			}
