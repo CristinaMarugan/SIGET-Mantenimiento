@@ -23,7 +23,7 @@
 		<div id="menu">
 			<div>
 			<ul>
-				<li><button id="btn-convocar" class="btn-convocar" onclick="cargar()">CONVOCAR REUNIÓN</button></li>
+				<li><button id="btn-convocar" class="btn btn-primary" onclick="cargar()">Nueva reunion</button></li>
 				<li><label id="ROL" class="LabelRol"></label></li>
 				<li class="item-r"><button id="btn-salir" class="btn-salir" onclick="location.href='index.html'; 	localStorage.clear();">SALIR</button></li>
 				
@@ -117,6 +117,7 @@
 						</div>
 				</div>
 			</div>
+			
 			<div id="convocar" class="modal fade">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -124,28 +125,45 @@
 							<button type="button" class="close" data-dismiss="modal">
 							<span aria-hidden="true">×</span> <span class="sr-only">close</span>
 							</button>
-							<h4 id="modalTitle" class="modal-title"><strong>Datos de Reunión</strong></h4>
+							<h4 id="modalTitle" class="modal-title"><strong>Nueva reunion</strong></h4>
 						</div>
-					<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><em class="fas fa-times"></em></a>
-					<h3>CONVOCAR REUNIÓN</h3>
-					<form action="">
-						<div class="contenedor-inputs">
-							<input type="text" id="tituloConvocar" placeholder="Titulo">
-							<input type="text" id="descripcionConvocar" placeholder="Descripción">
-							<input type="date" id="fechaconvocar" name="trip-start" value="2020-07-22" min="2018-01-01"> 
-							<input type="time" id="horaconvocar" name="appt" min="08:00" max="21:00" required>
-							<p>Selecciona los asistentes:</p>
-							<p>(Pulse la tecla Ctrl para seleccionar varios)</p>
-							<p>
-								<select name="asistentesConvocar[]" id = "arrayAsistentes" multiple>
-								</select>
-							</p>
-						</div>
-						<input type="submit" class="btn-submit" onclick="guardarReunion()" value="GUARDAR">
-					</form>
+
+						<div id="modalBody" class="modal-body">
+							<form>
+								<div id="inputtitulo">
+									<label id="texttitulo">Titulo:</label>
+									<input type="text" id="tituloconvocar" name="tituloconvocar" maxlength="80" size="35">	
+								</div>
+								<div>
+									<label id="descripcionconv">Descripcion:</label>
+									<input type="text" id="descripcionConvocar" placeholder="Descripción">
+								</div>
+								<div>
+									<label id="fechaconv">Fecha:</label>
+									<input type="date" id="fechaconvocar" name="trip-start" value="2020-07-22" min="2018-01-01"> 
+								</div>
+								<div>
+									<label id="texthoraconv">Hora de inicio:</label>
+									<input type="time" id="horaconvocar" name="appt" min="08:00" max="21:00" required>
+
+									<label id="texthorafinconv">Hora de fin:</label>
+									<input type="time" id="horafinconvocar" name="appt" min="08:00" max="21:00" required>
+								</div>
+								<div>
+									<p>Selecciona los asistentes:</p>
+									<p>(Pulse la tecla Ctrl para seleccionar varios)</p>
+									<p>
+										<select name="asistentesConvocar[]" id = "arrayAsistentes" multiple>
+										</select>
+									</p>
+								</div>>
+								<div id="inputbotones" align = center>
+									<input type="submit" class="btn-submit" onclick="guardarReunion()" value="GUARDAR">
+								</div>
+							</form>
+						</div>	
+					</div>
 				</div>
 			</div>
-		</div>
-		<script type="text/javascript" src="popups.js"></script>
 	</body>
 </html>

@@ -361,5 +361,6 @@ function cargar() {
         option.setAttribute("id","asistente");
         option.innerHTML = asistentesConvocar.usuarios[i];
         select.appendChild(option);
+
     }
 }
