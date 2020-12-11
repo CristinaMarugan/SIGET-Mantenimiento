@@ -19,13 +19,13 @@
 
 /*div principal del calendario*/
 #calendario {
-	border-color: rgb(84, 153, 199);
+	border-color: #225F8E;
 	border-width: 4px;
 	border-style: solid;
 	border-radius: 14px;
 	min-width: 470px;
 	min-height: 498px;
-	background-color: rgb(174, 214, 241);
+	background-color: #B8CFE1 ;
 	text-align: center;
 	margin-bottom: 20px;
 }
@@ -46,7 +46,7 @@
 
 #diasc th {
 	color: white;
-	background-color: rgb(84, 153, 199);
+	background-color:#588EB6;
 }
 
 #diasc td {
@@ -77,7 +77,7 @@
 
 /*formulario de busqueda de fechas*/
 #buscafecha {
-	background-color: rgb(84, 153, 199);
+	background-color:#588EB6;
 	color: #000;
 	padding: 5px
 }
@@ -129,7 +129,7 @@
 }
 
 #reuniones {
-	border-color: rgb(84, 153, 199);
+	border-color:#225F8E;
 	border-width: 4px;
 	border-style: solid;
 	min-width: 165px;
