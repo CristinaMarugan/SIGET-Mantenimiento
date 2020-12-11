@@ -26,7 +26,7 @@
                 <a class="navbar-brand" href="#">SIGET</a>
               </div>
               <ul class="nav navbar-nav">
-                <li id="btn-convocar" class="btn-convocar" onclick="cargar()"><a href="#">Nueva Reunión</a></li>
+                <li id="btn-convocar" class="btn-convocar" onclick="cargar()"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span> Nueva Reunión</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
               	<li><label id="ROL" class="LabelRol"></label></li>
@@ -91,7 +91,17 @@
 							<button type="button" class="close" data-dismiss="modal">
 							<span aria-hidden="true">×</span> <span class="sr-only">close</span>
 							</button>
-							<h4 id="modalTitle" class="modal-title"><strong>Datos de Reunión</strong></h4>
+							<div class="form-group row">
+								<div class="col-sm-4 col-form-label">
+									<h4 id="modalTitle" class="modal-title"><strong>Datos de Reunión</strong></h4>
+								</div>
+								<div class="col-sm-7">
+									<div class="btn-group">
+										<button id="btn-modificar" class="btn btn-warning">Modificar Reunión</button>
+										<button id="btn-cancelar" class="btn btn-danger" onclick="cancelar()">Cancelar Reunión</button>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div id="modalBody" class="modal-body">
 							<form>
@@ -114,11 +124,9 @@
 									<label id="textasistentes">Asistentes:</label><br>
 									<textarea id="asistentes" name="asistentes" class="form-control" rows="7" cols="40" readonly></textarea>
 								</div>
-								<div id="inputbotones" align = center>
+								<div id="inputbotones" align= "center" class="btn-group">
 									<a class="btn btn-success" onclick="aceptarReunion()">Aceptar</a>
 									<a class="btn btn-danger" onclick="rechazarReunion()">Rechazar</a>
-									<button id="btn-modificar" class="btn btn-primary">Modificar Reunión</button>
-									<button id="btn-cancelar" class="btn btn-primary" onclick="cancelar()">Cancelar Reunión</button>
 								</div>
 							</form>
 						</div>
@@ -130,37 +138,44 @@
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5  class="modal-title" id="modalconvTitle"><strong>Nueva reunion</strong></h5>
-					        <button type="button" class="close" data-dismiss="modal" aria-label="X">
+							<button type="button" class="close" data-dismiss="modal" aria-label="X">
 					          <span aria-hidden="true">&times;</span>
 					        </button>
-
-						</div>
+							<h4 class="modal-title" id="modalconvTitle"><strong>Nueva reunion</strong></h4>
+					    </div>
 
 						<div id="modalBody" class="modal-body">
 							<form>
-								<div id="inputtitulo">
-									<label id="texttitulo">Titulo:</label>
-									<input type="text" id="tituloconvocar" name="tituloconvocar" maxlength="80" size="35">	
+								<div class="form-group row">
+									<label id="texttitulo" class="col-sm-2 col-form-label">Titulo:</label>
+									<div class="col-sm-3">
+										<input type="text" id="tituloconvocar" name="tituloconvocar" maxlength="80" size="35" class="form-control" placeholder="Titulo">	
+									</div>
 								</div>
-								<div>
-									<label id="descripcionconv">Descripcion:</label>
-									<input type="text" id="descripcionConvocar" placeholder="Descripción">
+								<div class="form-group row">
+									<label id="descripcionconv" class="col-sm-2 col-form-label">Descripcion:</label>
+									<div class="col-sm-3">
+										<input type="text" id="descripcionConvocar" placeholder="Descripción" class="form-control">
+									</div>
 								</div>
-								<div>
-									<label id="fechaconv">Fecha:</label>
-									<input type="date" id="fechaconvocar" name="trip-start" value="2020-07-22" min="2018-01-01"> 
+								<div class="form-group row">
+									<label id="fechaconv" class="col-sm-2 col-form-label">Fecha:</label>
+									<div class="col-sm-3">
+										<input type="date" id="fechaconvocar" name="trip-start" value="2020-07-22" min="2018-01-01" class="form-control"> 
+									</div>
 								</div>
-								<div>
-									<label id="texthoraconv">Hora de inicio:</label>
-									<input type="time" id="horaconvocar" name="appt" min="08:00" max="21:00" required>
-
-									<label id="texthorafinconv">Hora de fin:</label>
-									<input type="time" id="horafinconvocar" name="appt" min="08:00" max="21:00" required>
+								<div class="form-group row">
+									<label id="texthoraconv" class="col-sm-2 col-form-label">Hora de inicio:</label>
+									<div class="col-sm-3">
+										<input type="time" id="horaconvocar" name="appt" min="08:00" max="21:00" required>
+									</div>
+									<label id="texthorafinconv"class="col-sm-2 col-form-label">Hora de fin:</label>
+									<div class="col-sm-3">	
+										<input type="time" id="horafinconvocar" name="appt" min="08:00" max="21:00" required>
+									</div>
 								</div>
-								<div>
-									<p>Selecciona los asistentes:</p>
-									<p>(Pulse la tecla Ctrl para seleccionar varios)</p>
+								<div class="form-group row">
+									<label>Selecciona los asistentes: (Pulse la tecla Ctrl para seleccionar varios)</label>
 									<p>
 										<select name="asistentesConvocar[]" id = "arrayAsistentes" multiple>
 										</select>
@@ -168,7 +183,7 @@
 								</div>
 								
 								<div class="modal-footer">
-									<div id="inputbotones" align ="center">
+									<div id="inputbotones" align="center">
 										<button class="btn btn-success" onclick="guardarReunion()">Guardar</button>
 									</div>
 								</div>
