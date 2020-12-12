@@ -29,7 +29,7 @@
                 <li id="btn-convocar" class="btn-convocar" onclick="cargar()"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span> Nueva Reunión</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-              	<li><label id="ROL" class="LabelRol"></label></li>
+              	<li><label id="ROL" class="text-light"></label></li>
                 <li><a href="index.html"><span id="btn-salir" onclick="localStorage.clear();" class="glyphicon glyphicon-log-in"></span> Salir</a></li>
               </ul>
             </div>
@@ -38,7 +38,7 @@
 		<br>
 		<div class="container">
 				<div id="cajas" class="row justify-content-md-center">
-					<div id="calendario" class="col-6" aling="right">
+					<div id="calendario" class="col-6" aling="center">
 						<div id="anterior" onclick="mesantes()"></div>
 						<div id="posterior" onclick="mesdespues()"></div>
 						<h2 id="titulos"></h2>
@@ -78,8 +78,9 @@
 						</div>
 					</div>
 					
-					<div id="reuniones" class="col-6" aling="left">
-						<div id="titulosreunion"><form id="formularioPreview"></form></div>
+					<div id="reuniones" class="col-6" aling="center">
+						<div id="titulosreunion">
+						<form id="formularioPreview"></form></div>
 					</div>
 				</div>
 		</div>
