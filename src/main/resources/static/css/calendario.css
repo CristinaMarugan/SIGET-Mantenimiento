@@ -44,7 +44,7 @@
     font-size:90%; 
     color:#9e9e9e; 
 	color: white;
-	background-color:#D11B2C;
+	background-color:#4499F2;
 }
 
 #diasc td {
@@ -60,7 +60,7 @@
 
 /*formulario de busqueda de fechas*/
 #buscafecha {
-	background-color:#A80312;
+	background-color:#1C6CBD;
 	color: #FFFFFF;
 	padding: 10px
 }
