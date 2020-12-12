@@ -3,52 +3,84 @@ package es.uclm.esi.payload.request;
 import java.util.Set;
 
 import javax.validation.constraints.*;
- 
+
+import org.joda.time.DateTime;
+
 public class SignupRequest {
-    @NotBlank
-    @Size(min = 3, max = 20)
-    private String username;
- 
-    @NotBlank
-    @Size(max = 50)
-    @Email
-    private String email;
-    
-    private Set<String> roles;
-    
-    @NotBlank
-    @Size(min = 6, max = 40)
-    private String password;
-  
-    public String getUsername() {
-        return username;
-    }
- 
-    public void setUsername(String username) {
-        this.username = username;
-    }
- 
-    public String getEmail() {
-        return email;
-    }
- 
-    public void setEmail(String email) {
-        this.email = email;
-    }
- 
-    public String getPassword() {
-        return password;
-    }
- 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-    
-    public Set<String> getRoles() {
-      return this.roles;
-    }
-    
-    public void setRole(Set<String> roles) {
-      this.roles = roles;
-    }
+	@NotBlank
+	@Size(min = 3, max = 20)
+	private String username;
+
+	@NotBlank
+	@Size(max = 50)
+	@Email
+	private String email;
+
+	private Set<String> roles;
+
+	@NotBlank
+	@Size(min = 6, max = 40)
+	private String password;
+
+	private String name;
+
+	private DateTime nacimiento;
+
+	private String dni;
+
+	private int tlf;
+
+	private String apellidos;
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Set<String> getRoles() {
+		return this.roles;
+	}
+
+	public void setRole(Set<String> roles) {
+		this.roles = roles;
+	}
+
+	public String getNombre() {
+		return this.name;
+	}
+
+	public String getApellidos() {
+		return this.apellidos;
+	}
+
+	public int getTelefono() {
+		return this.tlf;
+	}
+
+	public String getDni() {
+		return this.dni;
+	}
+
+	public DateTime getNacimiento() {
+		return this.nacimiento;
+	}
 }
