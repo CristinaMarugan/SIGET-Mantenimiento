@@ -32,11 +32,11 @@ public class User {
 	@DBRef
 	private Set<Role> roles = new HashSet<>();
 
-	private String nombre;
+	private String name;
 
 	private String apellidos;
 
-	private int telefono;
+	private int tlf;
 
 	private String dni;
 
@@ -54,9 +54,9 @@ public class User {
 		this.username = username;
 		this.email = email;
 		this.password = password;
-		this.nombre = nombre;
+		this.name = nombre;
 		this.apellidos =apellidos;
-		this.telefono = telefono;
+		this.tlf = telefono;
 		this.dni = dni;
 	}
 
@@ -101,11 +101,11 @@ public class User {
 	}
 
 	public String getNombre() {
-		return nombre;
+		return name;
 	}
 
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.name = nombre;
 	}
 
 	public String getApellidos() {
@@ -117,11 +117,11 @@ public class User {
 	}
 
 	public int getTelefono() {
-		return telefono;
+		return tlf;
 	}
 
 	public void setTelefono(int telefono) {
-		this.telefono = telefono;
+		this.tlf = telefono;
 	}
 
 	public String getDni() {
