@@ -94,6 +94,7 @@ function register() {
 		contentType: 'application/json',
 		success: function(response) {
 			alert("Registro realizado");
+			window.location="index.html";
 		},
 		error: function(response) {
 			alert("Error en el registro del usuario");

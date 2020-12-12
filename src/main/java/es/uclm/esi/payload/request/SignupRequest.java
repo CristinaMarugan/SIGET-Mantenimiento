@@ -60,7 +60,7 @@ public class SignupRequest {
 		this.roles = roles;
 	}
 
-	public String getNombre() {
+	public String getName() {
 		return this.name;
 	}
 
@@ -68,7 +68,7 @@ public class SignupRequest {
 		return this.apellidos;
 	}
 
-	public int getTelefono() {
+	public int getTlf() {
 		return this.tlf;
 	}
 
