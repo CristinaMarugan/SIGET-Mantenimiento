@@ -197,9 +197,9 @@ public class ControllerConvocarReunion {
 	
 	@PostMapping(value = "/modificar")
 	@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-	public ResponseEntity<HttpStatus> modificarReunion(@RequestBody Map<String, Object> entrada,
+	public ResponseEntity  modificarReunion(@RequestBody Map<String, Object> entrada,
 			@RequestHeader("Authorization") String token) {
-		
+		JSONObject resultado = new JSONObject();
 		JSONObject reu = new JSONObject(entrada);
 		Reunion reunion= rReuniones.findById(reu.getInt("id"));
 		reunion.setTitulo(reu.getString("titulo"));
@@ -212,9 +212,9 @@ public class ControllerConvocarReunion {
 		String nombreOrganizador = reunion.getOrganizador();
 		if (nombreOrganizador.equals(nombreOrganizadorCabecera)) {
 			rReuniones.save(reunion);
-			return new ResponseEntity<>(HttpStatus.OK);
+			 return new ResponseEntity("Reunion Modificada", HttpStatus.OK);
 		} else {
-			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+			 return new ResponseEntity("Debes ser organizador para modificar una reunion", HttpStatus.BAD_REQUEST);
 		}
 		
 	}

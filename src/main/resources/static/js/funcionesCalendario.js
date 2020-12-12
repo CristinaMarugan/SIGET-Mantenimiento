@@ -113,10 +113,14 @@ function mostrarInfoReunion(idReunion,diaReunion){
     var hora = document.getElementById("horareunion");
     hora.setAttribute("value",jsonMostrar.reuniones[idReunion-1].hora);
 
-    var descripcion = document.getElementById("descripcion");
-    descripcion.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].descripcion);
+    //var descripcion = document.getElementById("descripcion");
+    //descripcion.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].descripcion);
+    $('#descripcion').val(jsonMostrar.reuniones[idReunion-1].descripcion);
 
-	var strasistentes = "";
+    var horaF= document.getElementById("horafinreunion");
+    horaF.setAttribute("value",jsonMostrar.reuniones[idReunion-1].horaFin);
+    
+    var strasistentes = "";
     for(var i = 0; i < jsonMostrar.reuniones[idReunion-1].asistentes.length; i++){
 		strasistentes+=jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario+"\n";
     }
@@ -374,7 +378,12 @@ function cargar() {
 function modificar(){
     
     if($('#titureunion').val().length == 0 || $('#descripcion').val().length == 0 || $('#horareunion').val().length == 0 || $('#horafinreunion').val().length == 0) 
-     alert("Hay algun campo vacio");
+        alert("Hay algun campo vacio");
+    if($("#horareunion").val() > $("#horafinreunion").val() ){ //la hora de inicio es mayor que la de fin
+        alert("La hora de fin no puede ser anterior a la de inicio")
+        }
+    
+    
     else{
         var titulo = document.getElementById("titureunion");
         var descripcion = document.getElementById("descripcion");
@@ -399,10 +408,11 @@ function modificar(){
             headers: { 'Authorization': localStorage.getItem("jwt") },
             contentType: 'application/json',
             success : function(response) {
-                alert("Reunion modificada")
+                alert(response);
             },
             error : function(response) {
-               alert("Solo un organizador puede modificar una reunion")
+              
+               alert(response.responseText);
             }
         });
     }
