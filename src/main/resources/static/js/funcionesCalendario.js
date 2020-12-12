@@ -402,7 +402,7 @@ function modificar(){
                 alert("Reunion modificada")
             },
             error : function(response) {
-                console.log('Se produjo un problema al modificar una reunion');
+               alert("Solo un organizador puede modificar una reunion")
             }
         });
     }

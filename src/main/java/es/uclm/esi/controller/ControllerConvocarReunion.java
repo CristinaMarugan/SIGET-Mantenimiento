@@ -206,8 +206,16 @@ public class ControllerConvocarReunion {
 		reunion.setDescripcion(reu.getString("descripcion"));
 		reunion.setHora(reu.getString("horaInicio"));
 		reunion.setHoraFin(reu.getString("horaFin"));
-		rReuniones.save(reunion);
-		return new ResponseEntity<>(HttpStatus.OK);
+		String nombreOrganizadorCabecera = Jwts.parser().setSigningKey(jwtSecret)
+				.parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
+
+		String nombreOrganizador = reunion.getOrganizador();
+		if (nombreOrganizador.equals(nombreOrganizadorCabecera)) {
+			rReuniones.save(reunion);
+			return new ResponseEntity<>(HttpStatus.OK);
+		} else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
 		
 	}
 
