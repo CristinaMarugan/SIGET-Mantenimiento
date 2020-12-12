@@ -1,9 +1,10 @@
+
 /*instrucciones generales*/
 * {
 	margin: auto;
 }
 
-/*cabecera de la página*/
+/*cabecera de la pï¿½gina*/
 #titulo {
 	margin-left: 100px;
 	margin-right: 100px;
@@ -18,13 +19,13 @@
 
 /*div principal del calendario*/
 #calendario {
-	border-color: rgb(84, 153, 199);
+	border-color: #225F8E;
 	border-width: 4px;
 	border-style: solid;
 	border-radius: 14px;
 	min-width: 470px;
 	min-height: 498px;
-	background-color: rgb(174, 214, 241);
+	background-color: #B8CFE1 ;
 	text-align: center;
 	margin-bottom: 20px;
 }
@@ -45,7 +46,7 @@
 
 #diasc th {
 	color: white;
-	background-color: rgb(84, 153, 199);
+	background-color:#588EB6;
 }
 
 #diasc td {
@@ -59,7 +60,7 @@
 	border: 2px double coral;
 }
 
-/*línea de la fecha actual*/
+/*lï¿½nea de la fecha actual*/
 #fechaactual {
 	font: bold 12pt arial;
 	padding: 0.4em
@@ -76,7 +77,7 @@
 
 /*formulario de busqueda de fechas*/
 #buscafecha {
-	background-color: rgb(84, 153, 199);
+	background-color:#588EB6;
 	color: #000;
 	padding: 5px
 }
@@ -128,11 +129,11 @@
 }
 
 #reuniones {
-	border-color: rgb(84, 153, 199);
+	border-color:#225F8E;
 	border-width: 4px;
 	border-style: solid;
-	max-width: 300px;
 	min-width: 165px;
+	width: auto;
 	height: 500px;
 	background-color: #fffafa;
 	text-align: center;
@@ -224,42 +225,14 @@
 
 body {
 	background-color: rgb(242, 244, 244);
-	padding: 15px;
-	font-family: Arial;
 }
 
 #menu {
 	background-color: rgb(84, 153, 199);
-	margin-left: 30px;
-	margin-right: 30px;
-}
-
-
-#btn-convocar {
-	background-color: #4169E1
-}
-
-
-#btn-salir {
-	background-color: #FFFFFF
-}
-
-#ROL {
-	color: #ffffff;
-	font: bold 15pt arial, sans-serif;
-	margin: 20px;
-}
-
-#menu ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-#menu ul li {
-	display: inline-block;
 }
 
 .item-r {
 	float: right;
 }
+
+

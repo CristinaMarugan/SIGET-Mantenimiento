@@ -1,3 +1,4 @@
+/*
 .btn-convocar {
 	padding: 0 20px;
 	margin: 10px;
@@ -179,6 +180,7 @@
 /* ------------------------- */
 /* ANIMACIONES */
 /* ------------------------- */
+
 .popup.active {	transform: scale(1); opacity: 1; }
 .popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
 .popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
@@ -195,7 +197,7 @@
 		opacity: 1;
 	}
 }
-
+/*
 @keyframes entradaSubtitulo {
 	from {
 		opacity: 0;
@@ -212,3 +214,4 @@
 	from { opacity: 0; }
 	to { opacity: 1; }
 }
+

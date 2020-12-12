@@ -9,76 +9,81 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 		<link rel="stylesheet" type="text/css" href="css/calendario.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="css/popups.css" media="all" />
 
 		<script type="text/javascript" src="js/funcionesCalendario.js"></script>
 		<script type="text/javascript" src="js/calendario.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<div id="menu">
-			<div>
-			<ul>
-				<li><button id="btn-convocar" class="btn-convocar" onclick="cargar()">CONVOCAR REUNIÓN</button></li>
-				<li><button id="btn-modificar" class="btn-modificar">MODIFICAR REUNIÓN</button></li>
-				<li><button id="btn-cancelar" class="btn-cancelar" onclick="cancelar()">CANCELAR REUNIÓN</button></li>
-				<li><label id="ROL" class="LabelRol"></label></li>
-				<li class="item-r"><button id="btn-salir" class="btn-salir" onclick="location.href='index.html'; 	localStorage.clear();">SALIR</button></li>
-				
-			</ul>
-			</div>
+			<nav class="navbar navbar-expand-lg navbar-inverse bg-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">SIGET</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li id="btn-convocar" class="btn-convocar" onclick="cargar()"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span> Nueva Reunión</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+              	<li><label id="ROL" class="LabelRol"></label></li>
+                <li><a href="index.html"><span id="btn-salir" onclick="localStorage.clear();" class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+              </ul>
+            </div>
+        </nav>
 		</div>
 		<br>
-		<div id="cajas">
-			<div id="calendario">
-				<div id="anterior" onclick="mesantes()"></div>
-				<div id="posterior" onclick="mesdespues()"></div>
-				<h2 id="titulos"></h2>
-				<table id="diasc">
-					<tr id="fila0"><th scope="lun"></th><th scope="Mar"></th><th scope="Mie"></th><th scope="Jue"></th><th scope="Vie"></th><th scope="Sab"></th><th scope="Dom"></th></tr>
-					<tr id="fila1"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
-					<tr id="fila2"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
-					<tr id="fila3"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
-					<tr id="fila4"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
-					<tr id="fila5"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
-					<tr id="fila6"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
-				</table>
-				<div id="fechaactual"><em onclick="actualizar()">HOY: </em></div>
-				<div id="buscafecha">
-				<form action="#" name="buscar">
-					<p>Buscar: MES
-						<select name="buscames">
-							<option value="0">Enero</option>
-							<option value="1">Febrero</option>
-							<option value="2">Marzo</option>
-							<option value="3">Abril</option>
-							<option value="4">Mayo</option>
-							<option value="5">Junio</option>
-							<option value="6">Julio</option>
-							<option value="7">Agosto</option>
-							<option value="8">Septiembre</option>
-							<option value="9">Octubre</option>
-							<option value="10">Noviembre</option>
-							<option value="11">Diciembre</option>
-						</select>
-						AÑO 
-						<input type="text" name="buscaanno" maxlength="4" size="4" />
-		      
-						<input type="button" value="BUSCAR" onclick="mifecha()" />
-					</p>
-				</form>
+		<div class="container">
+				<div id="cajas" class="row justify-content-md-center">
+					<div id="calendario" class="col-6" aling="right">
+						<div id="anterior" onclick="mesantes()"></div>
+						<div id="posterior" onclick="mesdespues()"></div>
+						<h2 id="titulos"></h2>
+						<table id="diasc">
+							<tr id="fila0"><th scope="L"></th><th scope="M"></th><th scope="X"></th><th scope="J"></th><th scope="V"></th><th scope="S"></th><th scope="D"></th></tr>
+							<tr id="fila1"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
+							<tr id="fila2"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
+							<tr id="fila3"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
+							<tr id="fila4"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
+							<tr id="fila5"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
+							<tr id="fila6"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
+						</table>
+						<div id="fechaactual"><em onclick="actualizar()">HOY: </em></div>
+						<div id="buscafecha">
+						<form action="#" name="buscar">
+							<p>Buscar: MES
+								<select name="buscames">
+									<option value="0">Enero</option>
+									<option value="1">Febrero</option>
+									<option value="2">Marzo</option>
+									<option value="3">Abril</option>
+									<option value="4">Mayo</option>
+									<option value="5">Junio</option>
+									<option value="6">Julio</option>
+									<option value="7">Agosto</option>
+									<option value="8">Septiembre</option>
+									<option value="9">Octubre</option>
+									<option value="10">Noviembre</option>
+									<option value="11">Diciembre</option>
+								</select>
+								AÑO 
+								<input type="text" name="buscaanno" maxlength="4" size="4" />
+				      
+								<input type="button" value="BUSCAR" onclick="mifecha()" />
+							</p>
+						</form>
+						</div>
+					</div>
+					
+					<div id="reuniones" class="col-6" aling="left">
+						<div id="titulosreunion"><form id="formularioPreview"></form></div>
+					</div>
 				</div>
-			</div>
+		</div>
 			
-			<div id="reuniones">
-				<div id="titulosreunion">
-					<form id="formularioPreview"></form>
-				</div>
-			</div>
 			<div id="cajainforeuniones" class="modal fade">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -86,7 +91,17 @@
 							<button type="button" class="close" data-dismiss="modal">
 							<span aria-hidden="true">×</span> <span class="sr-only">close</span>
 							</button>
-							<h4 id="modalTitle" class="modal-title"><strong>Datos de Reunión</strong></h4>
+							<div class="form-group row">
+								<div class="col-sm-4 col-form-label">
+									<h4 id="modalTitle" class="modal-title"><strong>Datos de Reunión</strong></h4>
+								</div>
+								<div class="col-sm-7">
+									<div class="btn-group">
+										<button id="btn-modificar" class="btn btn-warning">Modificar Reunión</button>
+										<button id="btn-cancelar" class="btn btn-danger" onclick="cancelar()">Cancelar Reunión</button>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div id="modalBody" class="modal-body">
 							<form>
@@ -109,38 +124,73 @@
 									<label id="textasistentes">Asistentes:</label><br>
 									<textarea id="asistentes" name="asistentes" class="form-control" rows="7" cols="40" readonly></textarea>
 								</div>
-								<div id="inputbotones" align = center>
-									<button id="btn-aceptar" class="btn btn-success" onclick="aceptarReunion()">Aceptar</button>
-									<button id="btn-rechazar" class="btn btn-danger" onclick="rechazarReunion()">Rechazar</button>
-									<button id="btn-modificar" class="btn btn-warning">Modificar Reunión</button>
-									<button id="btn-cancelar" class="btn btn-danger" onclick="cancelar()">Cancelar Reunión</button>
+								<div id="inputbotones" align= "center" class="btn-group">
+									<a class="btn btn-success" onclick="aceptarReunion()">Aceptar</a>
+									<a class="btn btn-danger" onclick="rechazarReunion()">Rechazar</a>
 								</div>
 							</form>
 						</div>
+					</div>
 				</div>
 			</div>
-			<div class="overlay" id="overlay">
-				<div class="popup" id="popup">
-					<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><em class="fas fa-times"></em></a>
-					<h3>CONVOCAR REUNIÓN</h3>
-					<form action="">
-						<div class="contenedor-inputs">
-							<input type="text" id="tituloConvocar" placeholder="Titulo">
-							<input type="text" id="descripcionConvocar" placeholder="Descripción">
-							<input type="date" id="fechaconvocar" name="trip-start" value="2020-07-22" min="2018-01-01"> 
-							<input type="time" id="horaconvocar" name="appt" min="08:00" max="21:00" required>
-							<p>Selecciona los asistentes:</p>
-							<p>(Pulse la tecla Ctrl para seleccionar varios)</p>
-							<p>
-								<select name="asistentesConvocar[]" id = "arrayAsistentes" multiple>
-								</select>
-							</p>
-						</div>
-						<input type="submit" class="btn-submit" onclick="guardarReunion()" value="GUARDAR">
-					</form>
+			
+			<div class="modal fade" id="convocar" tabindex="-1" role="dialog" role="dialog" aria-labelledby="modalconvTitle" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="X">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+							<h4 class="modal-title" id="modalconvTitle"><strong>Nueva reunion</strong></h4>
+					    </div>
+
+						<div id="modalBody" class="modal-body">
+							<form>
+								<div class="form-group row">
+									<label id="texttitulo" class="col-sm-2 col-form-label">Titulo:</label>
+									<div class="col-sm-3">
+										<input type="text" id="tituloconvocar" name="tituloconvocar" maxlength="80" size="35" class="form-control" placeholder="Titulo">	
+									</div>
+								</div>
+								<div class="form-group row">
+									<label id="descripcionconv" class="col-sm-2 col-form-label">Descripcion:</label>
+									<div class="col-sm-3">
+										<input type="text" id="descripcionConvocar" placeholder="Descripción" class="form-control">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label id="fechaconv" class="col-sm-2 col-form-label">Fecha:</label>
+									<div class="col-sm-3">
+										<input type="date" id="fechaconvocar" name="trip-start" value="2020-07-22" min="2018-01-01" class="form-control"> 
+									</div>
+								</div>
+								<div class="form-group row">
+									<label id="texthoraconv" class="col-sm-2 col-form-label">Hora de inicio:</label>
+									<div class="col-sm-3">
+										<input type="time" id="horaconvocar" name="appt" min="08:00" max="21:00" required>
+									</div>
+									<label id="texthorafinconv"class="col-sm-2 col-form-label">Hora de fin:</label>
+									<div class="col-sm-3">	
+										<input type="time" id="horafinconvocar" name="appt" min="08:00" max="21:00" required>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label>Selecciona los asistentes: (Pulse la tecla Ctrl para seleccionar varios)</label>
+									<p>
+										<select name="asistentesConvocar[]" id = "arrayAsistentes" multiple>
+										</select>
+									</p>
+								</div>
+								
+								<div class="modal-footer">
+									<div id="inputbotones" align="center">
+										<button class="btn btn-success" onclick="guardarReunion()">Guardar</button>
+									</div>
+								</div>
+							</form>
+						</div>	
+					</div>
 				</div>
 			</div>
-		</div>
-		<script type="text/javascript" src="popups.js"></script>
 	</body>
 </html>

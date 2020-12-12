@@ -1,3 +1,4 @@
+
 var hoy = new Date();
 
 var infoMes;
@@ -63,7 +64,9 @@ function clickInfoReuniones(ID){
     		document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div><label>Actualizando...</label></div>");
     	} else {
     	   	var celda = document.getElementById(ID);
-            celda.style.border = "2px double coral";
+    	   	if(celda!=null){
+            	celda.style.border = "2px double coral";
+            }
     	    for(var i = 0; i < jsonDia.reuniones.length; i++){
     	       	document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div id='reunionYhora'><label id='reunion' "+
     	       	"onclick='mostrarInfoReunion("+jsonDia.reuniones[i].id+","+jsonDia.dia+")'>"+
@@ -385,7 +388,9 @@ function cargar() {
         option.setAttribute("id","asistente");
         option.innerHTML = asistentesConvocar.usuarios[i];
         select.appendChild(option);
+
     }
+
 }
 
 function mostrarBoton(idBoton){
@@ -395,3 +400,4 @@ function mostrarBoton(idBoton){
 function ocultarBoton(idBoton){
 	document.getElementById(idBoton).style.display = 'none';
 }
+$('#convocar').modal('show');
