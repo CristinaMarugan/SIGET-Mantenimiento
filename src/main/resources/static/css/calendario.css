@@ -15,28 +15,12 @@
 /*div principal del calendario*/
 #calendario {
 	min-width: 470px;
-	min-height: 498px;
-	background-color: #E0E0E0 ;
+	min-height: 467px;
+	background-color: #E0E0E0;
 	text-align: center;
 	margin-bottom: 20px;
 }
-
-#cal .header { 
-    cursor:default; 
-    background: #cd310d;  
-    height: 34px; 
-    position: relative; 
-    color:#fff; 
-    -webkit-border-top-left-radius: 5px; 
-    -webkit-border-top-right-radius: 5px; 
-    -moz-border-radius-topleft: 5px; 
-    -moz-border-radius-topright: 5px; 
-    border-top-left-radius: 5px; 
-    border-top-right-radius: 5px; 
-    font-weight:bold; 
-    text-shadow:0px -1px 0 #87260C; 
-    text-transform: uppercase; 
-} 
+ 
 
 /*tabla del calendario*/
 #diasc {
@@ -74,28 +58,17 @@
 	border: 2px double coral;
 }
 
-/*linea de la fecha actual*/
-#fechaactual { 
-    box-shadow:1px 1px 0px #fff inset; 
-    -moz-box-shadow:1px 1px 0px #fff inset; 
-    -webkit-box-shadow:1px 1px 0px #fff inset; 
-}
-
-
-#fechaactual em:hover {
-	color: red;
-}
-
 /*formulario de busqueda de fechas*/
 #buscafecha {
-	background-color:#588EB6;
-	color: #000;
-	padding: 5px
+	background-color:#A80312;
+	color: #FFFFFF;
+	padding: 10px
 }
 
 #buscafecha select, #buscafecha input {
+	align:center;
 	background-color: #fdfefe;
-	color: #000;
+	color: #000000;
 	font: bold 10pt arial;
 }
 
@@ -108,6 +81,22 @@
 }
 
 /*cabecera del calendario*/
+#cal .header { 
+    cursor:default; 
+    background: #cd310d;  
+    height: 34px; 
+    position: relative; 
+    color:#fff; 
+    -webkit-border-top-left-radius: 5px; 
+    -webkit-border-top-right-radius: 5px; 
+    -moz-border-radius-topleft: 5px; 
+    -moz-border-radius-topright: 5px; 
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px; 
+    font-weight:bold; 
+    text-shadow:0px -1px 0 #87260C; 
+    text-transform: uppercase; 
+}
 #anterior {
 	float: left;
 	width: 100px;
@@ -125,14 +114,15 @@
 }
 
 #anterior:hover {
-	color: red;
+	color: black;
 	text-decoration: underline;
 }
 
 #posterior:hover {
-	color: red;
+	color: black;
 	text-decoration: underline;
 }
+
 
 /*#titulos {
 	font: bold 15pt "arial black";
