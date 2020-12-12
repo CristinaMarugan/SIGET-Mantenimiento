@@ -55,7 +55,6 @@ public class RechazarReunionStepDefinitions extends SpringIntegrationTest {
   reunion.setId(id);
   reunion.setOrganizador("Elisa");
   reunion.setTitulo("TestRechazarReunion");
-  reunion.setEstado("aceptada");
   reunion.setDia(20);
   reunion.setMes(12);
   reunion.setAno(2020);

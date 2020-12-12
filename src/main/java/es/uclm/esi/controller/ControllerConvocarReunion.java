@@ -56,8 +56,6 @@ public class ControllerConvocarReunion {
 		reunion.setOrganizador(nombreOrganizador);
 		
 		reunion.setId(last());
-		
-		reunion.setEstado("pendiente");
 		reunion.setTitulo(reu.getString("titulo"));	
 		
 		JSONArray asistentes = (JSONArray) reu.get("asistentes");
