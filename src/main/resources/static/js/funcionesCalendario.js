@@ -113,6 +113,9 @@ function mostrarInfoReunion(idReunion,diaReunion){
 
     var hora = document.getElementById("horareunion");
     hora.setAttribute("value",jsonMostrar.reuniones[idReunion-1].hora);
+    
+    var horaFin = document.getElementById("horafinreunion");
+    horaFin.setAttribute("value",jsonMostrar.reuniones[idReunion-1].horaFin);
 
     var descripcion = document.getElementById("descripcion");
     descripcion.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].descripcion);
