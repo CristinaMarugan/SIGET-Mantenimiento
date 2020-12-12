@@ -4,8 +4,6 @@ import java.util.Set;
 
 import javax.validation.constraints.*;
 
-import org.joda.time.DateTime;
-
 public class SignupRequest {
 	@NotBlank
 	@Size(min = 3, max = 20)
@@ -23,8 +21,6 @@ public class SignupRequest {
 	private String password;
 
 	private String name;
-
-	private DateTime nacimiento;
 
 	private String dni;
 
@@ -78,9 +74,5 @@ public class SignupRequest {
 
 	public String getDni() {
 		return this.dni;
-	}
-
-	public DateTime getNacimiento() {
-		return this.nacimiento;
 	}
 }
