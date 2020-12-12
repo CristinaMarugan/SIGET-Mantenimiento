@@ -68,10 +68,9 @@ function clickInfoReuniones(ID){
             	celda.style.border = "2px double coral";
             }
     	    for(var i = 0; i < jsonDia.reuniones.length; i++){
-    	       	document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div id='reunionYhora'><label id='reunion' "+
+    	       	document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div id='reunionYhora'><label id='reunion' class='list-group-item list-group-item-action'"+
     	       	"onclick='mostrarInfoReunion("+jsonDia.reuniones[i].id+","+jsonDia.dia+")'>"+
-    	      	jsonDia.reuniones[i].titulo+"</label>"+
-    	        "<label id='horasreunion'>"+jsonDia.reuniones[i].hora+"</label><br></div>");
+    	      	jsonDia.reuniones[i].titulo+"</label>");
     	    }
     	}
 	} else {

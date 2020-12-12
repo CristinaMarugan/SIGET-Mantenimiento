@@ -118,7 +118,7 @@
 	text-decoration: underline;
 }
 
-#titulos {
+/*#titulos {
 	font: bold 15pt "arial black";
 	padding: 0.2em;
 }
@@ -135,13 +135,13 @@
 	margin-left: 20px;
 	margin-bottom: 20px;
 	overflow-y: scroll;
-}
+}/*
 
 #titulosreunion {
 	text-align: left;
 }
 
-#horasreunion {
+/*#horasreunion {
 	font: bold 11pt arial;
 	padding: 5px 5px 5px 5px;
 	text-align: center;
@@ -154,9 +154,8 @@
 
 #reunion:hover {
 	color: red;
-	text-decoration: underline;
 	cursor: pointer;
-}
+}*/
 
 
 
@@ -228,4 +227,7 @@ body {
 	float: right;
 }
 
+#listaReuniones{
+	width: 300px;
+}
 
