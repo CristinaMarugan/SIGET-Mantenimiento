@@ -97,7 +97,7 @@
 								</div>
 								<div class="col-sm-7">
 									<div class="btn-group">
-										<button id="btn-modificar" class="btn btn-warning">Modificar Reunión</button>
+										<button id="btn-modificar" class="btn btn-warning" onclick="modificar()">Modificar Reunión</button>
 										<button id="btn-cancelar" class="btn btn-danger" onclick="cancelar()">Cancelar Reunión</button>
 									</div>
 								</div>
@@ -107,18 +107,18 @@
 							<form>
 								<div id="inputtitulo">
 									<label id="texttitulo">Titulo:</label>
-									<input type="text" id="titureunion" name="titureunion" maxlength="80" size="35" readonly>	
+									<input type="text" id="titureunion" name="titureunion" maxlength="80" size="35" >	
 								</div>
 								<div id="inputhora">
 									<label id="texthora">Hora de inicio:</label>
-									<input type="text" id="horareunion" name="horareunion" maxlength="5" size="4" readonly>
+									<input type="text" id="horareunion" name="horareunion" maxlength="5" size="4" >
 									
 									<label id="texthora">Hora de fin:</label>
-									<input type="text" id="horafinreunion" name="horafinreunion" maxlength="5" size="4" readonly>
+									<input type="text" id="horafinreunion" name="horafinreunion" maxlength="5" size="4" >
 								</div>
 								<div id="inputdescripcion">
 									<label id="textdescripcion">Descripción:</label><br>
-									<textarea id="descripcion" name="descripcion" class="form-control" rows="7" cols="40" readonly></textarea><br>
+									<textarea id="descripcion" name="descripcion" class="form-control" rows="7" cols="40" ></textarea><br>
 								</div>
 								<div id="inputasistentes">
 									<label id="textasistentes">Asistentes:</label><br>

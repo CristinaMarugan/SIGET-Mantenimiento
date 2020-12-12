@@ -227,6 +227,7 @@ function reunionesMes(mesConcreto, anoConcreto){ //Recibirá las reuniones de un
     });
 }
 
+
 function cancelar() {
 	var info = {
 		id : identificador
@@ -368,4 +369,41 @@ function cargar() {
     }
     $('#convocar').modal('show');
     
+}
+
+function modificar(){
+    
+    if($('#titureunion').val().length == 0 || $('#descripcion').val().length == 0 || $('#horareunion').val().length == 0 || $('#horafinreunion').val().length == 0) 
+     alert("Hay algun campo vacio");
+    else{
+        var titulo = document.getElementById("titureunion");
+        var descripcion = document.getElementById("descripcion");
+        var horaInicio = document.getElementById("horareunion");
+        var horaFin = document.getElementById("horafinreunion");
+        
+        var info = {
+            "type" : "modificarReunion",
+            "id": identificador,
+            "titulo" : titulo.value,
+            "descripcion" : descripcion.value,
+            "horaInicio" : horaInicio.value,
+            "horaFin" : horaFin.value,
+            
+        };
+        $.ajax({
+            url : '/reunion/modificar',
+            data : JSON.stringify(info),
+            async : false,
+            type : "post",
+            dataType: 'json',
+            headers: { 'Authorization': localStorage.getItem("jwt") },
+            contentType: 'application/json',
+            success : function(response) {
+                alert("Reunion modificada")
+            },
+            error : function(response) {
+                console.log('Se produjo un problema al modificar una reunion');
+            }
+        });
+    }
 }

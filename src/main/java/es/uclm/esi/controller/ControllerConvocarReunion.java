@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -192,6 +193,22 @@ public class ControllerConvocarReunion {
 		}
 		return esBisiesto;
 
+	}
+	
+	@PostMapping(value = "/modificar")
+	@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+	public ResponseEntity<HttpStatus> modificarReunion(@RequestBody Map<String, Object> entrada,
+			@RequestHeader("Authorization") String token) {
+		
+		JSONObject reu = new JSONObject(entrada);
+		Reunion reunion= rReuniones.findById(reu.getInt("id"));
+		reunion.setTitulo(reu.getString("titulo"));
+		reunion.setDescripcion(reu.getString("descripcion"));
+		reunion.setHora(reu.getString("horaInicio"));
+		reunion.setHoraFin(reu.getString("horaFin"));
+		rReuniones.save(reunion);
+		return new ResponseEntity<>(HttpStatus.OK);
+		
 	}
 
 }
