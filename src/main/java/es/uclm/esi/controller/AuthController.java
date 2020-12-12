@@ -80,8 +80,8 @@ public class AuthController {
 
 		// Create new user's account
 		User user = new User(signUpRequest.getUsername(), signUpRequest.getEmail(),
-		        encoder.encode(signUpRequest.getPassword()), signUpRequest.getNombre(), signUpRequest.getApellidos(),
-		        signUpRequest.getTelefono(), signUpRequest.getDni());
+		        encoder.encode(signUpRequest.getPassword()), signUpRequest.getName(), signUpRequest.getApellidos(),
+		        signUpRequest.getTlf(), signUpRequest.getDni());
 
 		// lo de arriba lo comento ya que solo se registra el usuario como USER y el rol
 		// solo se lo puede asignar un admin en el panel (no implementado)
