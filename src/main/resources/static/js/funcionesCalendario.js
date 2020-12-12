@@ -345,10 +345,11 @@ function setRol(){
 
 function guardarReunion(){
 	var asistentes = [];
-	var titulo = document.getElementById("tituloConvocar");
+	var titulo = document.getElementById("tituloconvocar");
 	var descripcion = document.getElementById("descripcionConvocar");
 	var fecha = document.getElementById("fechaconvocar");
 	var hora = document.getElementById("horaconvocar");
+	var horaFin = document.getElementById("horafinconvocar");
 	var select = document.getElementById("arrayAsistentes");
 	for ( var i = 0; i < select.selectedOptions.length; i++) {
 		asistentes[i] = select.selectedOptions[i].value;
@@ -358,6 +359,7 @@ function guardarReunion(){
         "titulo" : titulo.value,
         "descripcion" : descripcion.value,
         "hora" : hora.value,
+        "horaFin" : horaFin.value,
         "fecha" : fecha.value,
         "asistentes" : asistentes
     };

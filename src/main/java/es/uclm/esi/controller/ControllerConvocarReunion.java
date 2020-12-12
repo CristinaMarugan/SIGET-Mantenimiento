@@ -88,6 +88,7 @@ public class ControllerConvocarReunion {
 		reunion.setAno(ano);
 		
 		reunion.setHora(reu.getString("hora"));
+		reunion.setHoraFin(reu.getString("horaFin"));
 		reunion.setDescripcion(reu.getString("descripcion"));
 		
 		if (filtroRestricciones(reunion)) {
@@ -140,6 +141,9 @@ public class ControllerConvocarReunion {
 		if(reunion.getHora().equals("")) {
 			ok=false;
 		}
+		if(reunion.getHoraFin().equals("")) {
+         ok=false;
+     }
 		if(reunion.getDescripcion().equals("")) {
 			ok=false;
 		}
