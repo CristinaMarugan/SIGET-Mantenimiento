@@ -390,7 +390,7 @@ function cargar() {
         select.appendChild(option);
 
     }
-
+    $('#convocar').modal('show');
 }
 
 function mostrarBoton(idBoton){
@@ -400,4 +400,3 @@ function mostrarBoton(idBoton){
 function ocultarBoton(idBoton){
 	document.getElementById(idBoton).style.display = 'none';
 }
-$('#convocar').modal('show');
