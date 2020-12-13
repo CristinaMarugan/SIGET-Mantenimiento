@@ -375,6 +375,14 @@ function cargar() {
     
 }
 
+function mostrarBoton(idBoton){
+	document.getElementById(idBoton).style.display = 'block';
+}
+
+function ocultarBoton(idBoton){
+	document.getElementById(idBoton).style.display = 'none';
+}
+
 function modificar(){
     
     if($('#titureunion').val().length == 0 || $('#descripcion').val().length == 0 || $('#horareunion').val().length == 0 || $('#horafinreunion').val().length == 0) 
