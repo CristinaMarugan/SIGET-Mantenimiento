@@ -4,11 +4,6 @@
 	margin: auto;
 }
 
-/*cabecera de la p�gina*/
-#titulo {
-	margin-left: 100px;
-	margin-right: 100px;
-}
 
 #cajas {
 	margin-left: 30px;
@@ -19,34 +14,37 @@
 
 /*div principal del calendario*/
 #calendario {
-	border-color: #225F8E;
-	border-width: 4px;
-	border-style: solid;
-	border-radius: 14px;
 	min-width: 470px;
-	min-height: 498px;
-	background-color: #B8CFE1 ;
+	min-height: 467px;
+	background-color: #E0E0E0;
 	text-align: center;
 	margin-bottom: 20px;
 }
+ 
 
 /*tabla del calendario*/
 #diasc {
-	border-collapse: separate;
+	background: #FFFFFF;
+	border-collapse: collapse;
 	border-spacing: 2px;
 }
 
 #diasc th, #diasc td {
-	font: normal 14pt arial;
+	color:#2b2b2b; 
 	width: 55px;
 	height: 50px;
-	border: 2px double #fffafa;
-	border-radius: 5px;
+    line-height:30px; 
+    text-align:center; 
+    border:1px solid #e6e6e6; 
+    cursor:default; 
 }
 
-#diasc th {
+#diasc th { 
+    text-transform:uppercase; 
+    font-size:90%; 
+    color:#9e9e9e; 
 	color: white;
-	background-color:#588EB6;
+	background-color:rgb(114, 159, 207);
 }
 
 #diasc td {
@@ -60,31 +58,17 @@
 	border: 2px double coral;
 }
 
-/*l�nea de la fecha actual*/
-#fechaactual {
-	font: bold 12pt arial;
-	padding: 0.4em
-}
-
-#fechaactual em {
-	cursor: pointer;
-}
-
-#fechaactual em:hover {
-	color: red;
-	text-decoration: underline;
-}
-
 /*formulario de busqueda de fechas*/
 #buscafecha {
-	background-color:#588EB6;
-	color: #000;
-	padding: 5px
+	background-color:#1C6CBD;
+	color: #FFFFFF;
+	padding: 10px
 }
 
 #buscafecha select, #buscafecha input {
+	align:center;
 	background-color: #fdfefe;
-	color: #000;
+	color: #000000;
 	font: bold 10pt arial;
 }
 
@@ -97,6 +81,22 @@
 }
 
 /*cabecera del calendario*/
+#cal .header { 
+    cursor:default; 
+    background: #cd310d;  
+    height: 34px; 
+    position: relative; 
+    color:#fff; 
+    -webkit-border-top-left-radius: 5px; 
+    -webkit-border-top-right-radius: 5px; 
+    -moz-border-radius-topleft: 5px; 
+    -moz-border-radius-topright: 5px; 
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px; 
+    font-weight:bold; 
+    text-shadow:0px -1px 0 #87260C; 
+    text-transform: uppercase; 
+}
 #anterior {
 	float: left;
 	width: 100px;
@@ -114,20 +114,20 @@
 }
 
 #anterior:hover {
-	color: red;
+	color: black;
 	text-decoration: underline;
 }
 
 #posterior:hover {
-	color: red;
+	color: black;
 	text-decoration: underline;
 }
 
-#titulos {
+
+/*#titulos {
 	font: bold 15pt "arial black";
 	padding: 0.2em;
 }
-
 #reuniones {
 	border-color:#225F8E;
 	border-width: 4px;
@@ -140,30 +140,23 @@
 	margin-left: 20px;
 	margin-bottom: 20px;
 	overflow-y: scroll;
-}
-
+}/*
 #titulosreunion {
-	font: 11pt arial;
-	padding: 5px 5px 5px 5px;
 	text-align: left;
 }
-
-#horasreunion {
+/*#horasreunion {
 	font: bold 11pt arial;
 	padding: 5px 5px 5px 5px;
 	text-align: center;
 }
-
 #reunionYhora {
 	font: 11pt arial;
 	padding: 5px 5px 5px 5px;
 }
-
 #reunion:hover {
 	color: red;
-	text-decoration: underline;
 	cursor: pointer;
-}
+}*/
 
 
 
@@ -235,4 +228,6 @@ body {
 	float: right;
 }
 
-
+#listaReuniones{
+	width: 300px;
+}

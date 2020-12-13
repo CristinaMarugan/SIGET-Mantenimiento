@@ -68,10 +68,9 @@ function clickInfoReuniones(ID){
             	celda.style.border = "2px double coral";
             }
     	    for(var i = 0; i < jsonDia.reuniones.length; i++){
-    	       	document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div id='reunionYhora'><label id='reunion' "+
+    	       	document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div id='reunionYhora'><label id='reunion' class='list-group-item list-group-item-action'"+
     	       	"onclick='mostrarInfoReunion("+jsonDia.reuniones[i].id+","+jsonDia.dia+")'>"+
-    	      	jsonDia.reuniones[i].titulo+"</label>"+
-    	        "<label id='horasreunion'>"+jsonDia.reuniones[i].hora+"</label><br></div>");
+    	      	jsonDia.reuniones[i].titulo+"</label>");
     	    }
     	}
 	} else {
@@ -113,6 +112,9 @@ function mostrarInfoReunion(idReunion,diaReunion){
 
     var hora = document.getElementById("horareunion");
     hora.setAttribute("value",jsonMostrar.reuniones[idReunion-1].hora);
+    
+    var horaFin = document.getElementById("horafinreunion");
+    horaFin.setAttribute("value",jsonMostrar.reuniones[idReunion-1].horaFin);
 
     var descripcion = document.getElementById("descripcion");
     descripcion.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].descripcion);
@@ -345,10 +347,11 @@ function setRol(){
 
 function guardarReunion(){
 	var asistentes = [];
-	var titulo = document.getElementById("tituloConvocar");
+	var titulo = document.getElementById("tituloconvocar");
 	var descripcion = document.getElementById("descripcionConvocar");
 	var fecha = document.getElementById("fechaconvocar");
 	var hora = document.getElementById("horaconvocar");
+	var horaFin = document.getElementById("horafinconvocar");
 	var select = document.getElementById("arrayAsistentes");
 	for ( var i = 0; i < select.selectedOptions.length; i++) {
 		asistentes[i] = select.selectedOptions[i].value;
@@ -358,6 +361,7 @@ function guardarReunion(){
         "titulo" : titulo.value,
         "descripcion" : descripcion.value,
         "hora" : hora.value,
+        "horaFin" : horaFin.value,
         "fecha" : fecha.value,
         "asistentes" : asistentes
     };

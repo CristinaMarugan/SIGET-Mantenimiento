@@ -29,7 +29,9 @@
                 <li id="btn-convocar" class="btn-convocar" onclick="cargar()"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span> Nueva Reunión</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-              	<li><label id="ROL" class="LabelRol"></label></li>
+              	<span class="navbar-text">
+					  	 <li><label id="ROL" class="text-light"></label></li>
+				</span>
                 <li><a href="index.html"><span id="btn-salir" onclick="localStorage.clear();" class="glyphicon glyphicon-log-in"></span> Salir</a></li>
               </ul>
             </div>
@@ -38,7 +40,7 @@
 		<br>
 		<div class="container">
 				<div id="cajas" class="row justify-content-md-center">
-					<div id="calendario" class="col-6" aling="right">
+					<div id="calendario" class="col-6" aling="center">
 						<div id="anterior" onclick="mesantes()"></div>
 						<div id="posterior" onclick="mesdespues()"></div>
 						<h2 id="titulos"></h2>
@@ -51,7 +53,6 @@
 							<tr id="fila5"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
 							<tr id="fila6"><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td><td onclick="clickInfoReuniones(id)" class="dia"></td></tr>
 						</table>
-						<div id="fechaactual"><em onclick="actualizar()">HOY: </em></div>
 						<div id="buscafecha">
 						<form action="#" name="buscar">
 							<p>Buscar: MES
@@ -78,10 +79,15 @@
 						</div>
 					</div>
 					
-					<div id="reuniones" class="col-6" aling="left">
-						<div id="titulosreunion"><form id="formularioPreview"></form></div>
-					</div>
 				</div>
+		</div>
+		<div id="listaReuniones" class="list-group" aling="center">
+			<a href="#" class="list-group-item list-group-item-action active">
+				Lista de Reuniones
+			</a>
+			<div id="titulosreunion">
+				<form id="formularioPreview"></form>
+			</div>
 		</div>
 			
 			<div id="cajainforeuniones" class="modal fade">

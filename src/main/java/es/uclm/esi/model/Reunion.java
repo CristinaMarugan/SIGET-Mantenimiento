@@ -16,24 +16,28 @@ public class Reunion {
 	private int id;
 	private String organizador;
 	private String titulo;
+	private String estado;
 	private int dia;
 	private int mes;
 	private int ano;
 	private String hora;
+	private String horaFin;
 	private String descripcion;
 	private ArrayList<Asistente> asistentes;
 	
 	
 
-	public Reunion(int id, String organizador, String titulo, int dia, int mes, int ano, String hora) {
+	public Reunion(int id, String organizador, String titulo, String estado, int dia, int mes, int ano, String hora, String horaFin) {
 		super();
 		this.id = id;
 		this.organizador = organizador;
 		this.titulo = titulo;
+		this.estado = estado;
 		this.dia = dia;
 		this.mes = mes;
 		this.ano = ano;
 		this.hora = hora;
+		this.horaFin=horaFin;
 		this.asistentes = new ArrayList<>();
 	}
 
@@ -96,6 +100,13 @@ public class Reunion {
 	public void setHora(String hora) {
 		this.hora = hora;
 	}
+	public String getHoraFin() {
+     return horaFin;
+ }
+
+ public void setHoraFin(String horaFin) {
+     this.horaFin = horaFin;
+ }
 
 	public ArrayList<Asistente> getAsistentes() {
 		return asistentes;
@@ -115,5 +126,16 @@ public class Reunion {
 
 	public void setOrganizador(String organizador) {
 		this.organizador = organizador;
-	}	
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	
+
 }

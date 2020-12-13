@@ -26,10 +26,6 @@ window.onload = function() {
 	// Elementos del DOM en primera fila
 	f0 = document.getElementById("fila0");
 
-	//Pie de calendario
-	pie = document.getElementById("fechaactual");
-	pie.innerHTML += lasemana[diasemhoy]+", "+diahoy+" de "+meses[meshoy]+" de "+annohoy;
-
 	//Formulario: datos iniciales:
 	document.buscar.buscaanno.value = annohoy;
 
@@ -112,12 +108,11 @@ function escribirdias() {
             }
 
             //Destacar la fecha actual
-            if(mimes == meshoy && midia == diahoy && mianno == annohoy ) { 
-          	    celda.style.backgroundColor = "#76d7c4";
+            if(mimes == meshoy && midia == diahoy && mianno == annohoy ) { ;
               	celda.innerHTML = "<cite title='Fecha Actual'>"+ midia +"</cite>";
                 //celda.style.border = "thick solid #9370DB";
                 celda.style.font = "bold 18pt arial";
-                celda.style.color = "#2874a6";
+                celda.style.color = "#000000";
            	} else {
                	celda.style.font = "normal 14pt arial";
             }
@@ -129,7 +124,7 @@ function escribirdias() {
             if(jsonreuniones != 0){
 	            for(ii = 0; ii < jsonreuniones.reuniones.length; ii++){ //Resalta cuando hay una reunión ese día
 	              	if(celda.getAttribute("id") == jsonreuniones.reuniones[ii]){
-	              		celda.style.backgroundColor = "#d1f2eb";
+	              		celda.style.backgroundColor = "#CACCD3";
 	               	}
 	            }
         	}
