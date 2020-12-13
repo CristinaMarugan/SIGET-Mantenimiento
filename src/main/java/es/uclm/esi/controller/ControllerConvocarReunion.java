@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -196,6 +197,30 @@ public class ControllerConvocarReunion {
 		}
 		return esBisiesto;
 
+	}
+	
+	@PostMapping(value = "/modificar")
+	@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+	public ResponseEntity  modificarReunion(@RequestBody Map<String, Object> entrada,
+			@RequestHeader("Authorization") String token) {
+		JSONObject resultado = new JSONObject();
+		JSONObject reu = new JSONObject(entrada);
+		Reunion reunion= rReuniones.findById(reu.getInt("id"));
+		reunion.setTitulo(reu.getString("titulo"));
+		reunion.setDescripcion(reu.getString("descripcion"));
+		reunion.setHora(reu.getString("horaInicio"));
+		reunion.setHoraFin(reu.getString("horaFin"));
+		String nombreOrganizadorCabecera = Jwts.parser().setSigningKey(jwtSecret)
+				.parseClaimsJws(token.substring(7, token.length())).getBody().getSubject();
+
+		String nombreOrganizador = reunion.getOrganizador();
+		if (nombreOrganizador.equals(nombreOrganizadorCabecera)) {
+			rReuniones.save(reunion);
+			 return new ResponseEntity("Reunion Modificada", HttpStatus.OK);
+		} else {
+			 return new ResponseEntity("Debes ser organizador para modificar una reunion", HttpStatus.BAD_REQUEST);
+		}
+		
 	}
 
 }

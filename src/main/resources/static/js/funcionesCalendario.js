@@ -68,9 +68,10 @@ function clickInfoReuniones(ID){
             	celda.style.border = "2px double coral";
             }
     	    for(var i = 0; i < jsonDia.reuniones.length; i++){
-    	       	document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div id='reunionYhora'><label id='reunion' class='list-group-item list-group-item-action'"+
+    	       	document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div id='reunionYhora'><label id='reunion' "+
     	       	"onclick='mostrarInfoReunion("+jsonDia.reuniones[i].id+","+jsonDia.dia+")'>"+
-    	      	jsonDia.reuniones[i].titulo+"</label>");
+    	      	jsonDia.reuniones[i].titulo+"</label>"+
+    	        "<label id='horasreunion'>"+jsonDia.reuniones[i].hora+"</label><br></div>");
     	    }
     	}
 	} else {
@@ -102,7 +103,6 @@ function detallesEnBlanco(){
 }
 
 function mostrarInfoReunion(idReunion,diaReunion){
-	var invitacionRespondida = false;
     var jsonMostrar = getDetallesReunionDiaC();
     
     identificador = jsonMostrar.reuniones[idReunion-1].identificador;
@@ -112,31 +112,17 @@ function mostrarInfoReunion(idReunion,diaReunion){
 
     var hora = document.getElementById("horareunion");
     hora.setAttribute("value",jsonMostrar.reuniones[idReunion-1].hora);
+
+    //var descripcion = document.getElementById("descripcion");
+    //descripcion.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].descripcion);
+    $('#descripcion').val(jsonMostrar.reuniones[idReunion-1].descripcion);
+
+    var horaF= document.getElementById("horafinreunion");
+    horaF.setAttribute("value",jsonMostrar.reuniones[idReunion-1].horaFin);
     
-    var horaFin = document.getElementById("horafinreunion");
-    horaFin.setAttribute("value",jsonMostrar.reuniones[idReunion-1].horaFin);
-
-    var descripcion = document.getElementById("descripcion");
-    descripcion.setAttribute("placeholder",jsonMostrar.reuniones[idReunion-1].descripcion);
-
-	var strasistentes = "";
+    var strasistentes = "";
     for(var i = 0; i < jsonMostrar.reuniones[idReunion-1].asistentes.length; i++){
 		strasistentes+=jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario+"\n";
-		if (jsonMostrar.reuniones[idReunion-1].asistentes[i].usuario == localStorage.rol) 
-			if(jsonMostrar.reuniones[idReunion-1].asistentes[i].estado == "Aceptado")
-				invitacionRespondida = true;
-    }
-    
-    if(invitacionRespondida){
-    	ocultarBoton("btn-aceptar");
-    	ocultarBoton("btn-rechazar");
-    	mostrarBoton("btn-modificar");
-    	mostrarBoton("btn-cancelar");
-    } else{
-    	mostrarBoton("btn-aceptar");
-    	mostrarBoton("btn-rechazar");
-    	ocultarBoton("btn-modificar");
-    	ocultarBoton("btn-cancelar");
     }
     
     var asistentes = document.getElementById("asistentes");
@@ -245,27 +231,25 @@ function reunionesMes(mesConcreto, anoConcreto){ //Recibirá las reuniones de un
     });
 }
 
+
 function cancelar() {
-	var opcion = confirm("¿Estás seguro que no desea asisitir a esta reunión?");
-	if (opcion == true) {
-		var info = {
-			id : identificador
-		};
-		$.ajax({
-			url : '/reunion/cancelar',
-	        async : false,
-	        data : JSON.stringify(info),
-	        type : "post",
-	        headers: { 'Authorization': localStorage.getItem("jwt") },
-	        contentType: 'application/json',
-	        success : function(response) {
-	        	recarga();
-	        },
-	        error : function(response) {
-	            console.log('Se produjo un problema cancelando reunion');
-	        }
-	    });
-	}
+	var info = {
+		id : identificador
+	};
+	$.ajax({
+		url : '/reunion/cancelar',
+        async : false,
+        data : JSON.stringify(info),
+        type : "post",
+        headers: { 'Authorization': localStorage.getItem("jwt") },
+        contentType: 'application/json',
+        success : function(response) {
+        	recarga();
+        },
+        error : function(response) {
+            console.log('Se produjo un problema cancelando reunion');
+        }
+    });
 }
 
 function aceptarReunion() {
@@ -285,24 +269,19 @@ function aceptarReunion() {
 }
 
 function rechazarReunion() {
-
-	var opcion = confirm("¿Estás seguro que no desea asisitir a esta reunión?");
-	
-	if (opcion == true) {
-	 var info = {
-		        id: identificador
-		    }
-		    $.ajax({
-				url : '/reunion/rechazar',
-		        async : false,
-		        data : JSON.stringify(info),
-		        type : "post",
-		        dataType: 'json',
-		        headers: { 'Authorization': localStorage.getItem("jwt") },
-		        contentType: 'application/json',
-		        success : recarga()
-		    });
-	} 
+    var info = {
+        id: identificador
+    }
+    $.ajax({
+		url : '/reunion/rechazar',
+        async : false,
+        data : JSON.stringify(info),
+        type : "post",
+        dataType: 'json',
+        headers: { 'Authorization': localStorage.getItem("jwt") },
+        contentType: 'application/json',
+        success : recarga()
+    });
 }
 
 function getDetallesReunionDiaC(){
@@ -347,11 +326,10 @@ function setRol(){
 
 function guardarReunion(){
 	var asistentes = [];
-	var titulo = document.getElementById("tituloconvocar");
+	var titulo = document.getElementById("tituloConvocar");
 	var descripcion = document.getElementById("descripcionConvocar");
 	var fecha = document.getElementById("fechaconvocar");
 	var hora = document.getElementById("horaconvocar");
-	var horaFin = document.getElementById("horafinconvocar");
 	var select = document.getElementById("arrayAsistentes");
 	for ( var i = 0; i < select.selectedOptions.length; i++) {
 		asistentes[i] = select.selectedOptions[i].value;
@@ -361,7 +339,6 @@ function guardarReunion(){
         "titulo" : titulo.value,
         "descripcion" : descripcion.value,
         "hora" : hora.value,
-        "horaFin" : horaFin.value,
         "fecha" : fecha.value,
         "asistentes" : asistentes
     };
@@ -395,6 +372,7 @@ function cargar() {
 
     }
     $('#convocar').modal('show');
+    
 }
 
 function mostrarBoton(idBoton){
@@ -403,4 +381,49 @@ function mostrarBoton(idBoton){
 
 function ocultarBoton(idBoton){
 	document.getElementById(idBoton).style.display = 'none';
+}
+
+function modificar(){
+    
+    if($('#titureunion').val().length == 0 || $('#descripcion').val().length == 0 || $('#horareunion').val().length == 0 || $('#horafinreunion').val().length == 0) 
+        alert("Hay algun campo vacio");
+    if($("#horareunion").val() > $("#horafinreunion").val() ){ //la hora de inicio es mayor que la de fin
+        alert("La hora de fin no puede ser anterior a la de inicio")
+        }
+    
+    
+    else{
+        if(confirm("Acepte para modificar una reunion")){
+            var titulo = document.getElementById("titureunion");
+            var descripcion = document.getElementById("descripcion");
+            var horaInicio = document.getElementById("horareunion");
+            var horaFin = document.getElementById("horafinreunion");
+            
+            var info = {
+                "type" : "modificarReunion",
+                "id": identificador,
+                "titulo" : titulo.value,
+                "descripcion" : descripcion.value,
+                "horaInicio" : horaInicio.value,
+                "horaFin" : horaFin.value,
+                
+            };
+            $.ajax({
+                url : '/reunion/modificar',
+                data : JSON.stringify(info),
+                async : false,
+                type : "post",
+                dataType: 'json',
+                headers: { 'Authorization': localStorage.getItem("jwt") },
+                contentType: 'application/json',
+                success : function(response) {
+                    alert(response);
+                },
+                error : function(response) {
+                
+                alert(response.responseText);
+                }
+            });
+        }
+    }
 }
