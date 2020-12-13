@@ -70,7 +70,7 @@ function clickInfoReuniones(ID){
     	    for(var i = 0; i < jsonDia.reuniones.length; i++){
     	       	document.getElementById("formularioPreview").insertAdjacentHTML('beforeend',"<div id='reunionYhora'><label id='reunion' "+
     	       	"onclick='mostrarInfoReunion("+jsonDia.reuniones[i].id+","+jsonDia.dia+")'>"+
-    	      	jsonDia.reuniones[i].titulo+"</label>"+
+    	      	jsonDia.reuniones[i].titulo+"</label>"+" "+
     	        "<label id='horasreunion'>"+jsonDia.reuniones[i].hora+"</label><br></div>");
     	    }
     	}
