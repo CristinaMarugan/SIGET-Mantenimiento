@@ -393,35 +393,37 @@ function modificar(){
     
     
     else{
-        var titulo = document.getElementById("titureunion");
-        var descripcion = document.getElementById("descripcion");
-        var horaInicio = document.getElementById("horareunion");
-        var horaFin = document.getElementById("horafinreunion");
-        
-        var info = {
-            "type" : "modificarReunion",
-            "id": identificador,
-            "titulo" : titulo.value,
-            "descripcion" : descripcion.value,
-            "horaInicio" : horaInicio.value,
-            "horaFin" : horaFin.value,
+        if(confirm("Acepte para modificar una reunion")){
+            var titulo = document.getElementById("titureunion");
+            var descripcion = document.getElementById("descripcion");
+            var horaInicio = document.getElementById("horareunion");
+            var horaFin = document.getElementById("horafinreunion");
             
-        };
-        $.ajax({
-            url : '/reunion/modificar',
-            data : JSON.stringify(info),
-            async : false,
-            type : "post",
-            dataType: 'json',
-            headers: { 'Authorization': localStorage.getItem("jwt") },
-            contentType: 'application/json',
-            success : function(response) {
-                alert(response);
-            },
-            error : function(response) {
-              
-               alert(response.responseText);
-            }
-        });
+            var info = {
+                "type" : "modificarReunion",
+                "id": identificador,
+                "titulo" : titulo.value,
+                "descripcion" : descripcion.value,
+                "horaInicio" : horaInicio.value,
+                "horaFin" : horaFin.value,
+                
+            };
+            $.ajax({
+                url : '/reunion/modificar',
+                data : JSON.stringify(info),
+                async : false,
+                type : "post",
+                dataType: 'json',
+                headers: { 'Authorization': localStorage.getItem("jwt") },
+                contentType: 'application/json',
+                success : function(response) {
+                    alert(response);
+                },
+                error : function(response) {
+                
+                alert(response.responseText);
+                }
+            });
+        }
     }
 }
