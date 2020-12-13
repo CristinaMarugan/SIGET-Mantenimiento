@@ -25,7 +25,6 @@ function openNav() {
 			window.location="register.html"
         },
         error : function(response) {
-            alert("No eres administrador");
             console.log('Se produjo un problema en getAsistentes()');
         }
     });
