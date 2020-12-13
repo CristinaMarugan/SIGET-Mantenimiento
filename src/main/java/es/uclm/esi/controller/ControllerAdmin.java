@@ -1,17 +1,25 @@
 package es.uclm.esi.controller;
 
+import java.lang.Enum.EnumDesc;
 import java.util.HashSet;
+import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 
 import javax.validation.Valid;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,7 +34,7 @@ import es.uclm.esi.repository.UserRepository;
 import es.uclm.esi.security.jwt.JwtUtils;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("")
 
 public class ControllerAdmin {
 
@@ -94,5 +102,23 @@ public class ControllerAdmin {
 		return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
 	}
 	
-	
+	@PostMapping("/getRol")
+	@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+	public ResponseEntity<MessageResponse> getRol(@RequestBody Map<String, Object> entrada,
+			@RequestHeader("Authorization") String token){
+		String rol;
+		boolean admin =false;
+		JSONObject user = new JSONObject(entrada);
+		Optional<User> u= userRepository.findByUsername(user.getString("usuario"));
+		Set<Role> roles =u.get().getRoles();
+		for (Role s : roles) {
+			rol =s.getName().name();
+			if(rol.equals("ROLE_ADMIN"))
+				admin=true;
+		}
+		if(admin)
+			return ResponseEntity.ok(new MessageResponse("admin"));
+		else
+			return ResponseEntity.badRequest().body(new MessageResponse("user"));
+	}
 }

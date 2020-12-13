@@ -7,6 +7,31 @@ var detallesDia = 0;
 var identificador = 0;
 var asistentes;
 
+function openNav() {
+   
+    var info = {
+        type : "getRol",
+        usuario: localStorage.rol
+    };
+    $.ajax({
+        url : '/getRol',
+        data : JSON.stringify(info),
+        async : false,
+        type : "post",
+        dataType: 'json',
+        contentType: 'application/json',
+        headers: { 'Authorization': localStorage.getItem("jwt") },
+        success : function(response) {
+			window.location="register.html"
+        },
+        error : function(response) {
+            alert("No eres administrador");
+            console.log('Se produjo un problema en getAsistentes()');
+        }
+    });
+
+
+}
 function llamadaAsistentes(){
     var info = {
         type : "getAsistentes",
