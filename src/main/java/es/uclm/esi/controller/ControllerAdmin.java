@@ -1,13 +1,16 @@
 package es.uclm.esi.controller;
 
 import java.lang.Enum.EnumDesc;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,6 +26,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import es.uclm.esi.model.Asistente;
 import es.uclm.esi.model.ERole;
 import es.uclm.esi.model.Role;
 import es.uclm.esi.model.User;
@@ -120,5 +124,33 @@ public class ControllerAdmin {
 			return ResponseEntity.ok(new MessageResponse("admin"));
 		else
 			return ResponseEntity.badRequest().body(new MessageResponse("user"));
+	}
+	
+	@PostMapping("/deleteUser")
+	@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+	public ResponseEntity<MessageResponse> eliminarUser(@RequestBody Map<String, Object> entrada,
+			@RequestHeader("Authorization") String token){
+		String rol;
+		boolean admin =false;
+		JSONObject user = new JSONObject(entrada);
+		Optional<User> u= userRepository.findByUsername(user.getString("admin"));
+		Set<Role> roles =u.get().getRoles();
+		for (Role s : roles) {
+			rol =s.getName().name();
+			if(rol.equals("ROLE_ADMIN"))
+				admin=true;
+		}
+		if(admin) {
+			JSONArray usuarios = (JSONArray) user.get("asistentes");
+			ArrayList<Asistente> usuariosE = new ArrayList<>();
+			for (int i = 0; i < usuarios.length(); i++) {
+				String nombre = (String) usuarios.get(i);
+				Optional<User> usuario= userRepository.findByUsername(nombre);
+				userRepository.deleteById(usuario.get().getId());
+			}
+			return ResponseEntity.ok(new MessageResponse("admin"));
+		}else {
+			return ResponseEntity.badRequest().body(new MessageResponse("no eres un administrador"));
+		}
 	}
 }
