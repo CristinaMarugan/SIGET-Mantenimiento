@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Eliminar un usuario</title>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.css" />
+<link href='css/Register.css' rel='stylesheet' />
+</head>
+<body>
+<body style="background-color: rgb(114, 159, 207);">
+
+	<div class="container">
+		<h2>Eliminar usuario</h2>
+		<br>
+		<div id="listUsers" class="list-group">
+		  <a href="#" class="list-group-item list-group-item-action active">
+		    Lista de usuarios SIGET
+		  </a>
+		  <div id="users">
+		  	<form id="formularioUsers">
+				<div  class="form-group">
+					<select multiple class="form-control" id="arrayUsuarios">
+				    </select>
+				</div>
+		  </div>
+		</div>
+		
+		<br>
+		<div class="row">
+			<div class="col">
+				<span class="float-right" id="delete" onclick="Eliminar()"><span class="btn btn-success">Eliminar</span></span>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="js/delete.js"></script>
+</html>

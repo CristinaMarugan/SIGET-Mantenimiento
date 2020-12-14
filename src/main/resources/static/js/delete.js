@@ -1,0 +1,80 @@
+var asistentes;
+
+window.onload = function() {
+	CargarListaUsers();
+}
+
+function CargarListaUsers(){
+    llamadaAsistentes();
+    var asistentesConvocar = getAsistentes();
+
+    for(var i = 0; i < asistentesConvocar.usuarios.length; i++){ 
+        document.getElementById("arrayUsuarios").insertAdjacentHTML('beforeend',"<option>"+asistentesConvocar.usuarios[i]+"</option>");
+    }
+}
+
+function getAsistentes(){
+	return asistentes;
+}
+
+function Eliminar(){
+    var usuarios = [];
+    var select = document.getElementById("arrayUsuarios");
+	for ( var i = 0; i < select.selectedOptions.length; i++) {
+		usuarios[i] = select.selectedOptions[i].value;
+	}
+    var info = {
+        type : "eliminar",
+        "admin" : localStorage.rol,
+        "usuarios" : usuarios
+    };
+    if(usuarios.length==0){
+               alert("No has seleccionado ningún usuario");
+            }else if(!confirm("¿Estás seguro de que quieres eliminar este usuario?")){
+            	alert("Operación cancelada");       
+            }else{
+                alert("Usuario Eliminado");
+			    $.ajax({
+			        url : '/deleteUser',
+			        data : JSON.stringify(info),
+			        async : false,
+			        type : "post",
+			        dataType: 'json',
+			        contentType: 'application/json',
+			        headers: { 'Authorization': localStorage.getItem("jwt") },
+			        success : function(response) {
+						window.location.reload();
+			        },
+			        error : function(response) {
+			            console.log('Se produjo un problema al eliminar el usuario');
+			        }
+			    });
+    }
+}
+
+function llamadaAsistentes(){
+    var info = {
+        type : "getAsistentes",
+    };
+    $.ajax({
+        url : '/reunion/getAsistentes',
+        data : JSON.stringify(info),
+        async : false,
+        type : "post",
+        dataType: 'json',
+        contentType: 'application/json',
+        headers: { 'Authorization': localStorage.getItem("jwt") },
+        success : function(response) {
+			setAsistentes(response);
+        },
+        error : function(response) {
+            console.log('Se produjo un problema en getAsistentes()');
+        }
+    });
+}
+
+function setAsistentes(data){
+	asistentes = data;
+}
+
+
