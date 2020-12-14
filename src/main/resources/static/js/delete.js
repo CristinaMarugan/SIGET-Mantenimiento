@@ -19,7 +19,6 @@ function getAsistentes(){
 
 function Eliminar(){
     var usuarios = [];
-    var mensaje = confirm("¿Estás seguro de que quieres eliminar este usuario?");
     var select = document.getElementById("arrayUsuarios");
 	for ( var i = 0; i < select.selectedOptions.length; i++) {
 		usuarios[i] = select.selectedOptions[i].value;
@@ -29,8 +28,10 @@ function Eliminar(){
         "admin" : localStorage.rol,
         "usuarios" : usuarios
     };
-    if(mensaje==false){
-                alert("Operación cancelada");
+    if(usuarios.length==0){
+               alert("No has seleccionado ningún usuario");
+            }else if(!confirm("¿Estás seguro de que quieres eliminar este usuario?")){
+            	alert("Operación cancelada");       
             }else{
                 alert("Usuario Eliminado");
 			    $.ajax({
