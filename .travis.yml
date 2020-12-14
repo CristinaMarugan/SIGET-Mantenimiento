@@ -4,10 +4,3 @@ script:
 - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent verify sonar:sonar
 before_install:
 - chmod +x mvnw
-deploy:
-  provider: heroku
-  app: siget-mantenimiento
-  true:
-    branch: develop
-  api_key:
-    secure: Z6HTvKElpptGbknkIxmnW8i6Fm9wvXztSCH0JUUGTECdGt/x8OqXGK/C9ZfQLo414vOqB7oOjMT0qgouU77sPauWyRsNnHhbFli/rKy05GB04WBQWJkZ7gpFaPQ+nuQTuEg6u3GCcmUyDiRuzG/GxNpogP8cdC+BKLWGCqLyFgyucKkVNUvk7dq+15YuG35CPbUhMQjZTq9vjwVY2yhDIp3xIRFPsLJX6qoACpNSjHIqYs+gZNEfPaa1ih+c9dCpzWLIWyMymzh49SwsTgthu3wLtiO+4I8iZJz0yITSS59Jo7XR6TDlmfMvkfJvK50vq/1pyCK+Vuk8skQhNz09oT8fllT8Tmhvb4xSwfr42SpAC2arr9DtRPhBPUJl14bx6TCxQ4UQguCo26Vnr4o78FzotMR/e6HiPJ5pzFGmPyYw+B7MK9V6iLulAFHTLftbMjNYZfR5mPSceenJn142/i3U6fWWrl4uCIMfA/hktqFEbyQ0vy57pL0wGTQUVxI184Wbr6zfNEsRxKLu1f5G6kkpw2QSnYkQkbSQ/d1EigrOJ3VEtnnU/foWVROfxrthInD7hZt8VK4yFChPNto4u31ZHSM0COWpAO+VhmRtClcqkJ5/zZsm9RSn/pWv/e1Fu+cv0d56e5jqPPFeRBrEt8LgGDeTtMzp1C3INH/zcT8=
