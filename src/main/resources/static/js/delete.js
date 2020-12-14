@@ -9,7 +9,7 @@ function CargarListaUsers(){
     var asistentesConvocar = getAsistentes();
 
     for(var i = 0; i < asistentesConvocar.usuarios.length; i++){ 
-        document.getElementById("formularioUsers").insertAdjacentHTML('beforeend',"<label id='reunion' class='list-group-item list-group-item-action'>"+asistentesConvocar.usuarios[i]+"</label>");
+        document.getElementById("arrayUsuarios").insertAdjacentHTML('beforeend',"<option>"+asistentesConvocar.usuarios[i]+"</option>");
     }
 }
 
@@ -21,13 +21,12 @@ function Eliminar(){
     var usuarios = [];
     var mensaje = confirm("¿Estás seguro de que quieres eliminar este usuario?");
     var select = document.getElementById("arrayUsuarios");
-    alert(localStorage.rol);
 	for ( var i = 0; i < select.selectedOptions.length; i++) {
 		usuarios[i] = select.selectedOptions[i].value;
 	}
     var info = {
         type : "eliminar",
-        usuario : localStorage.rol,
+        "admin" : localStorage.rol,
         "usuarios" : usuarios
     };
     if(mensaje==false){

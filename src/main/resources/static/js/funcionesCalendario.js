@@ -22,7 +22,7 @@ function openNav() {
         contentType: 'application/json',
         headers: { 'Authorization': localStorage.getItem("jwt") },
         success : function(response) {
-			window.location="register.html"
+			window.location="GestionUser.html"
         },
         error : function(response) {
             console.log('Se produjo un problema en getAsistentes()');

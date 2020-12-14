@@ -141,8 +141,7 @@ public class ControllerAdmin {
 				admin=true;
 		}
 		if(admin) {
-			JSONArray usuarios = (JSONArray) user.get("asistentes");
-			ArrayList<Asistente> usuariosE = new ArrayList<>();
+			JSONArray usuarios = (JSONArray) user.get("usuarios");
 			for (int i = 0; i < usuarios.length(); i++) {
 				String nombre = (String) usuarios.get(i);
 				Optional<User> usuario= userRepository.findByUsername(nombre);
