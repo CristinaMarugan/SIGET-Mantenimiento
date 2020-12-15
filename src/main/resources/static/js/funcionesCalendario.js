@@ -400,10 +400,8 @@ function guardarReunion(){
         headers: { 'Authorization': localStorage.getItem("jwt") },
         contentType: 'application/json',
         success : function(response) {
-            alert("reunion creada")
         },
         error : function(response) {
-            alert("error")
             console.log('Se produjo un problema en guardarReunion()');
         }
     });
