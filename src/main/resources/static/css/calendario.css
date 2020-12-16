@@ -54,7 +54,7 @@
 
 #diasc tr td.dia:hover {
 	cursor: pointer;
-	font: bold 16pt arial;
+	font: bold 16pt arial, sans-serif;
 	border: 2px double coral;
 }
 
@@ -66,10 +66,10 @@
 }
 
 #buscafecha select, #buscafecha input {
-	align:center;
+	align-items:center;
 	background-color: #fdfefe;
 	color: #000000;
-	font: bold 10pt arial;
+	font: bold 10pt arial, sans-serif;
 }
 
 #buscafecha [type=text] {
@@ -100,7 +100,7 @@
 #anterior {
 	float: left;
 	width: 100px;
-	font: bold 12pt arial;
+	font: bold 12pt arial, sans-serif;
 	padding: 0.5em 0.1em;
 	cursor: pointer;
 }
@@ -108,7 +108,7 @@
 #posterior {
 	float: right;
 	width: 100px;
-	font: bold 12pt arial;
+	font: bold 12pt arial, sans-serif;
 	padding: 0.5em 0.1em;
 	cursor: pointer;
 }
@@ -162,7 +162,7 @@
 
 #inputtitulo, #inputhora, #inputdescripcion, #inputasistentes {
 	margin: 15px;
-	font: bold 11pt arial;
+	font: bold 11pt arial, sans-serif;
 }
 
 #horareunion {
@@ -171,7 +171,7 @@
 
 #descripcion, #asistentes {
 	resize: none;
-	font: normal 11pt arial;
+	font: normal 11pt arial, sans-serif;
 }
 
 #inputbotones {
