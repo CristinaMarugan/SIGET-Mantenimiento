@@ -113,11 +113,15 @@ public class ControllerAdmin {
 		boolean admin =false;
 		JSONObject user = new JSONObject(entrada);
 		Optional<User> u= userRepository.findByUsername(user.getString("usuario"));
-		Set<Role> roles =u.get().getRoles();
-		for (Role s : roles) {
-			rol =s.getName().name();
-			if(rol.equals("ROLE_ADMIN"))
-				admin=true;
+		if(u.isPresent()) {
+			Set<Role> roles =u.get().getRoles();
+			for (Role s : roles) {
+				rol =s.getName().name();
+				if(rol.equals("ROLE_ADMIN"))
+					admin=true;
+			}	
+		} else {
+			return null;
 		}
 		if(admin)
 			return ResponseEntity.ok(new MessageResponse("admin"));
@@ -133,18 +137,28 @@ public class ControllerAdmin {
 		boolean admin =false;
 		JSONObject user = new JSONObject(entrada);
 		Optional<User> u= userRepository.findByUsername(user.getString("admin"));
-		Set<Role> roles =u.get().getRoles();
-		for (Role s : roles) {
-			rol =s.getName().name();
-			if(rol.equals("ROLE_ADMIN"))
-				admin=true;
+		if(u.isPresent()) {
+			Set<Role> roles =u.get().getRoles();
+			for (Role s : roles) {
+				rol =s.getName().name();
+				if(rol.equals("ROLE_ADMIN"))
+					admin=true;
+			}
+		} else {
+			return null;
 		}
+		
 		if(admin) {
 			JSONArray usuarios = (JSONArray) user.get("usuarios");
 			for (int i = 0; i < usuarios.length(); i++) {
 				String nombre = (String) usuarios.get(i);
 				Optional<User> usuario= userRepository.findByUsername(nombre);
-				userRepository.deleteById(usuario.get().getId());
+				if(usuario.isPresent()) {
+					userRepository.deleteById(usuario.get().getId());
+				} else {
+					return null;
+				}
+				
 			}
 			return ResponseEntity.ok(new MessageResponse("admin"));
 		}else {
