@@ -55,11 +55,13 @@ public class ControllerAdmin {
 
 	@Autowired
 	JwtUtils jwtUtils;
+	
+	private static final String ADMIN = "admin";
 
 	
 	@Value("${siget.app.jwtSecret}")
 	private String jwtSecret;
-	public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
+	public ResponseEntity<MessageResponse> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
 		if (userRepository.existsByUsername(signUpRequest.getUsername())) {
 			return ResponseEntity.badRequest().body(new MessageResponse("Error: Username is already taken!"));
 		}
@@ -83,7 +85,7 @@ public class ControllerAdmin {
 	
 	
 	
-	public ResponseEntity<?> eliminarUsuario(@Valid @RequestBody SignupRequest signUpRequest) {
+	public ResponseEntity<MessageResponse> eliminarUsuario(@Valid @RequestBody SignupRequest signUpRequest) {
 		if (userRepository.existsByUsername(signUpRequest.getUsername())) {
 			return ResponseEntity.badRequest().body(new MessageResponse("Error: Username is already taken!"));
 		}
@@ -124,7 +126,7 @@ public class ControllerAdmin {
 			return null;
 		}
 		if(admin)
-			return ResponseEntity.ok(new MessageResponse("admin"));
+			return ResponseEntity.ok(new MessageResponse(ADMIN));
 		else
 			return ResponseEntity.badRequest().body(new MessageResponse("user"));
 	}
@@ -136,7 +138,7 @@ public class ControllerAdmin {
 		String rol;
 		boolean admin =false;
 		JSONObject user = new JSONObject(entrada);
-		Optional<User> u= userRepository.findByUsername(user.getString("admin"));
+		Optional<User> u= userRepository.findByUsername(user.getString(ADMIN));
 		if(u.isPresent()) {
 			Set<Role> roles =u.get().getRoles();
 			for (Role s : roles) {
@@ -160,7 +162,7 @@ public class ControllerAdmin {
 				}
 				
 			}
-			return ResponseEntity.ok(new MessageResponse("admin"));
+			return ResponseEntity.ok(new MessageResponse(ADMIN));
 		}else {
 			return ResponseEntity.badRequest().body(new MessageResponse("no eres un administrador"));
 		}

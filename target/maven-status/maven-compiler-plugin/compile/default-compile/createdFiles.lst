@@ -22,6 +22,7 @@ es\uclm\esi\security\services\UserDetailsServiceImpl.class
 es\uclm\esi\payload\request\CalendarioMesRequest.class
 es\uclm\esi\config\TomcatConfig.class
 es\uclm\esi\payload\request\CalendarioDiaRequest.class
+es\uclm\esi\controller\ControllerAdmin.class
 es\uclm\esi\model\Asistente.class
 es\uclm\esi\repository\RepositoryReuniones.class
 es\uclm\esi\config\TomcatConfig$1.class

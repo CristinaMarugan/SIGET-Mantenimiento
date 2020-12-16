@@ -1,5 +1,13 @@
+es\uclm\esi\CancelarReunionStepDefinitions.class
 es\uclm\esi\SigetApplicationTests.class
 es\uclm\esi\SpringIntegrationTest.class
+es\uclm\esi\LoginStepDefinitions.class
 es\uclm\esi\RunCucumberTest.class
+es\uclm\esi\ModificarReunionStepDefinitions.class
+es\uclm\esi\RolesStepDefinitions.class
+es\uclm\esi\CalendarioStepDefinitions.class
 es\uclm\esi\AceptarReunionStepDefinitions.class
+es\uclm\esi\ConvocarReunionStepDefinitions.class
+es\uclm\esi\RegistroStepDefinitions.class
+es\uclm\esi\RechazarReunionStepDefinitions.class
 es\uclm\esi\CucumberTestContextConfiguration.class

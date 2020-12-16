@@ -1,69 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.uclm.esi.RunCucumberTest" time="13.621" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.uclm.esi.RunCucumberTest" time="0.741" tests="1" errors="1" skipped="0" failures="0">
   <properties>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\bin"/>
-    <property name="java.vm.version" value="25.231-b11"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="15.0.1+9-18"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.1\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\carlo\OneDrive\Documentos\GitHub\SIGET-Mantenimiento"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Pilar\git\SIGET-Equipo3"/>
-    <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="path.separator" value=";"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
     <property name="user.script" value=""/>
     <property name="user.country" value="ES"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Pilar\git\SIGET-Equipo3"/>
-    <property name="java.runtime.version" value="1.8.0_231-b11"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_231\jre\lib\endorsed"/>
+    <property name="user.dir" value="C:\Users\carlo\OneDrive\Documentos\GitHub\SIGET-Mantenimiento"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="15.0.1+9-18"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\Pilar\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\carlo\AppData\Local\Temp\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\Pilar\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf704707240103077502.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\carlo\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf11190078299225338337.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_231\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/Pilar/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932/jre/bin/server;C:/Users/Pilar/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\WINDOWS\System32\OpenSSH\;C:\Users\Pilar\apache-maven-3.6.0\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Users\Pilar\AppData\Local\Microsoft\WindowsApps;C:\Users\Pilar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Pilar\.dotnet\tools;C:\Users\Pilar\AppData\Local\GitHubDesktop\bin;C:\Users\Pilar\Desktop;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-15.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/carlo/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932/jre/bin/server;C:/Users/carlo/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Ruby27-x64\bin;C:\Users\carlo\AppData\Local\Microsoft\WindowsApps;C:\Users\carlo\AppData\Local\GitHubDesktop\bin;C:\w64devkit\bin;C:\Users\carlo\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Users\carlo\.deno\bin;C:\Users\carlo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Gradle\gradle-6.7.1\bin;C:\Users\carlo\AppData\Local\Android\Sdk\platform-tools;C:\Users\carlo\AppData\Local\Android\Sdk\tools;C:\Users\carlo\AppData\Local\Android\Sdk\tools\bin;;C:\WINDOWS\System32;;."/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="59.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="user.home" value="C:\Users\Pilar"/>
-    <property name="user.timezone" value="Europe/Paris"/>
-    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
-    <property name="java.specification.version" value="1.8"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="user.name" value="Pilar"/>
-    <property name="java.class.path" value="C:\Users\Pilar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.16.0.20200610-1735\jars\plexus-classworlds-2.6.0.jar"/>
-    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="user.home" value="C:\Users\carlo"/>
+    <property name="user.timezone" value="Europe/Madrid"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.specification.version" value="15"/>
+    <property name="user.name" value="Carlos"/>
+    <property name="java.class.path" value="C:\Users\carlo\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.16.0.20200610-1735\jars\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="15"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_231\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
-    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean org.jacoco:jacoco-maven-plugin:prepare-agent verify sonar:sonar"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-15.0.1"/>
     <property name="user.language" value="es"/>
-    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
-    <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_231"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_231\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_231\jre\classes"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="15.0.1"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Users\Pilar\git\SIGET-Equipo3\EMBEDDED"/>
+    <property name="maven.home" value="C:\Users\carlo\OneDrive\Documentos\GitHub\SIGET-Mantenimiento\EMBEDDED"/>
     <property name="file.separator" value="\"/>
-    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
-    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.version.date" value="2020-10-20"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="rechazar" classname="Rechazar" time="9.76"/>
-  <testcase name="cancelar" classname="Cancelar reunion" time="0.982"/>
-  <testcase name="Buen Login" classname="Login" time="0.476"/>
-  <testcase name="Mal Login" classname="Login" time="0.378"/>
-  <testcase name="Mal Login 2" classname="Login" time="0.497"/>
-  <testcase name="Mal Login 3" classname="Login" time="0.629"/>
+  <testcase name="initializationError" classname="es.uclm.esi.RunCucumberTest" time="0.003">
+    <error message="Locale provider adapter &quot;CLDR&quot;cannot be instantiated." type="java.util.ServiceConfigurationError">java.util.ServiceConfigurationError: Locale provider adapter "CLDR"cannot be instantiated.
+Caused by: java.lang.reflect.InvocationTargetException
+Caused by: java.util.ServiceConfigurationError: sun.util.locale.provider.LocaleDataMetaInfo: Unable to load sun.util.resources.cldr.provider.CLDRLocaleDataMetaInfo
+Caused by: java.lang.LinkageError: loader 'platform' attempted duplicate class definition for sun.util.resources.cldr.provider.CLDRLocaleDataMetaInfo. (sun.util.resources.cldr.provider.CLDRLocaleDataMetaInfo is in module jdk.localedata of loader 'platform')
+</error>
+    <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting sun/util/resources/cldr/provider/CLDRLocaleDataMetaInfo.
+	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:94)
+	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:246)
+	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:563)
+	at java.base/java.lang.ClassLoader.defineClass2(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1108)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:183)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:784)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassInModuleOrNull(BuiltinClassLoader.java:705)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClass(BuiltinClassLoader.java:586)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:634)
+	at java.base/java.lang.Class.forName(Class.java:546)
+	at java.base/java.util.ServiceLoader.loadProvider(ServiceLoader.java:854)
+	at java.base/java.util.ServiceLoader$ModuleServicesLookupIterator.hasNext(ServiceLoader.java:1078)
+	at java.base/java.util.ServiceLoader$2.hasNext(ServiceLoader.java:1301)
+	at java.base/java.util.ServiceLoader$3.hasNext(ServiceLoader.java:1386)
+	at java.base/sun.util.cldr.CLDRLocaleProviderAdapter$1.run(CLDRLocaleProviderAdapter.java:89)
+	at java.base/sun.util.cldr.CLDRLocaleProviderAdapter$1.run(CLDRLocaleProviderAdapter.java:86)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at java.base/sun.util.cldr.CLDRLocaleProviderAdapter.<init>(CLDRLocaleProviderAdapter.java:86)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at java.base/sun.util.locale.provider.LocaleProviderAdapter.forType(LocaleProviderAdapter.java:188)
+	at java.base/sun.util.locale.provider.LocaleProviderAdapter.findAdapter(LocaleProviderAdapter.java:287)
+	at java.base/sun.util.locale.provider.LocaleProviderAdapter.getAdapter(LocaleProviderAdapter.java:258)
+	at java.base/java.text.DecimalFormatSymbols.getInstance(DecimalFormatSymbols.java:180)
+	at java.base/java.util.Formatter.getZero(Formatter.java:2437)
+	at java.base/java.util.Formatter.<init>(Formatter.java:1956)
+	at java.base/java.util.Formatter.<init>(Formatter.java:1978)
+	at java.base/java.lang.String.format(String.java:3292)
+	at org.junit.runner.Description.formatDisplayName(Description.java:114)
+	at org.junit.runner.Description.createTestDescription(Description.java:110)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.getDescription(PickleRunners.java:160)
+	at io.cucumber.junit.FeatureRunner.describeChild(FeatureRunner.java:128)
+	at io.cucumber.junit.FeatureRunner.lambda$getDescription$1(FeatureRunner.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at io.cucumber.junit.FeatureRunner.getDescription(FeatureRunner.java:116)
+	at io.cucumber.junit.Cucumber.describeChild(Cucumber.java:194)
+	at io.cucumber.junit.Cucumber.describeChild(Cucumber.java:90)
+	at org.junit.runners.ParentRunner.getDescription(ParentRunner.java:401)
+	at org.junit.runners.model.RunnerBuilder.configureRunner(RunnerBuilder.java:81)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:72)
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:37)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:70)
+	at org.junit.internal.requests.ClassRequest.createRunner(ClassRequest.java:28)
+	at org.junit.internal.requests.MemoizingRequest.getRunner(MemoizingRequest.java:19)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:364)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+Caused by: java.io.IOException: Error while instrumenting sun/util/resources/cldr/provider/CLDRLocaleDataMetaInfo.
+	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrumentError(Instrumenter.java:159)
+	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:109)
+	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:92)
+	... 55 more
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 59
+	at org.jacoco.agent.rt.internal_43f5073.asm.ClassReader.<init>(ClassReader.java:195)
+	at org.jacoco.agent.rt.internal_43f5073.asm.ClassReader.<init>(ClassReader.java:176)
+	at org.jacoco.agent.rt.internal_43f5073.asm.ClassReader.<init>(ClassReader.java:162)
+	at org.jacoco.agent.rt.internal_43f5073.core.internal.instr.InstrSupport.classReaderFor(InstrSupport.java:280)
+	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:75)
+	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:107)
+	... 56 more
+]]></system-err>
+  </testcase>
 </testsuite>
